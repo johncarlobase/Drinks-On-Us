@@ -1,9 +1,9 @@
 // Dependencies
 const router = require("express").Router();
-const itemRoutes = require("./items");
+const drinkRoutes = require("./drinks");
 
-// Item routes
-router.use("/items", itemRoutes);
+// drink routes
+router.use("/drinks", drinkRoutes);
 
 //Exporting
 module.exports = router;
