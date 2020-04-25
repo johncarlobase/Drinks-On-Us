@@ -2,14 +2,14 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-//This file empties the Items & Users collections and inserts the items & users below
+//This file empties the drinks & Users collections and inserts the drinks & users below
 
 mongoose.connect(
 	process.env.MONGODB_URI || "mongodb://localhost:27017/DRINKS_DB",
 	{ useNewUrlParser: true }
 );
 
-const itemSeed = [
+const drinkSeed = [
 	{
 		drink: "Screwdriver",
 		ingredient: "Vodka",
@@ -28,8 +28,8 @@ const itemSeed = [
 	
 ];
 
-db.Item.remove({})
-	.then(() => db.Item.collection.insertMany(itemSeed))
+db.Drink.remove({})
+	.then(() => db.Drink.collection.insertMany(drinkSeed))
 	.then((data) => {
 		console.log(data.result.n + " records inserted!");
 	})

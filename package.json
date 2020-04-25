@@ -1,4 +1,4 @@
-{
+
   "name": "Drinks-On-Us",
   "version": "1.0.0",
   "description": "",
@@ -31,4 +31,5 @@
     "url": "https://github.com/johncarlobase/Drinks-On-Us/issues"
   },
   "homepage": "https://github.com/johncarlobase/Drinks-On-Us#readme"
+
 }
