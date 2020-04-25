@@ -1,5 +1,5 @@
-
-  "name": "Drinks-On-Us",
+{
+"name": "drinks-on-us",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -31,5 +31,4 @@
     "url": "https://github.com/johncarlobase/Drinks-On-Us/issues"
   },
   "homepage": "https://github.com/johncarlobase/Drinks-On-Us#readme"
-
 }
