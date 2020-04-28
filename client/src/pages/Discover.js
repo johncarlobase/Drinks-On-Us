@@ -52,13 +52,13 @@ class Discover extends Component {
   render() {
     return (
       <div>
-        <h1 className="text-center">Make New Friends</h1>
+        <h1 className="text-center">Wing it!!! Try This Drink of the Day!</h1>
         <h3 className="text-center">
-          Thumbs up on any pups you'd like to meet!
+          Thumbs up on any drink you would try today!
         </h3>
         <Card image={this.state.image} handleBtnClick={this.handleBtnClick} />
         <h1 className="text-center">
-          Made friends with {this.state.matchCount} pups so far!
+          Will try {this.state.matchCount} cocktails tonight!
         </h1>
         <Alert style={{ opacity: this.state.match ? 1 : 0 }} type="success">
           Yay! That Pup Liked You Too!!!

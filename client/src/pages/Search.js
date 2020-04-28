@@ -13,6 +13,13 @@ class Search extends Component {
     error: ""
   };
 
+  // const drinkSeed = [
+  //   state = {
+  //     search: "",
+  //     drink: [],
+  //     ingredient: [],
+  //   }
+
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
   componentDidMount() {
     API.getBaseBreedsList()
@@ -39,7 +46,7 @@ class Search extends Component {
     return (
       <div>
         <Container style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Search By Breed!</h1>
+          <h1 className="text-center">Search By Cocktail Name!</h1>
           <Alert
             type="danger"
             style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
