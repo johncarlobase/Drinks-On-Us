@@ -1,0 +1,85 @@
+/* .jumbotron {
+    display: flex;
+    align-items: center;
+   
+    background-size: cover;
+
+    height: 100px;
+
+    width: 100%;
+    padding: 64px 0px 48px 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  } */
+
+  
+/* 
+  .jumbotron p{
+    width: 100%;
+    text-align: center;
+    font-size: 88px;
+
+    color: rgb(10, 10, 10);
+    margin-bottom: 10px;
+   /* font-family: 'Bungee Shade', cursive;*/
+    /* font-family: 'Kumar One', cursive;*/
+    /*font-family: 'Kumar One Outline', cursive;
+    /*font-family: 'Megrim', cursive;*/
+    /*font-family: 'Monoton', cursive; */
+
+
+    /* text-shadow:
+      -1px -1px 0 rgb(20, 1, 1),
+      1px -1px 0 rgb(235, 227, 227),
+      -1px 1px 0 rgb(14, 1, 1),  
+      1px 1px 0 rgb(240, 126, 126);
+    
+  } */
+ /* */
+.jumbotron{
+  background-image: url(wall.jpg);
+}
+  .wrapper {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+ 
+
+  }
+  @font-face {
+    font-family: neon;
+    src: url(NEON\ ABSOLUTE\ SANS1.ttf);
+
+  }
+  .neon-wrapper {
+    box-shadow:
+    0 0 0.1vw  0.4vw #fff7f7,   
+    0 0 0.4vw  0.6vw #e97272, 
+    0 0   4vw  0.4vw #e50b0b,
+  
+    inset 0 0 1.5vw  0.4vw #e50b0b,
+    inset 0 0 0.4vw  0.2vw #e97272,
+    inset 0 0 0.5vw  0.2vw #fff7f7;
+    border-radius: 1.5rem;
+  }
+  .neon-text {
+    font-family:neon;
+    text-align: center;
+    font-size: 118px;
+    color: #ffd8d8;
+    padding: 0 3.5rem 0 3.5rem;
+    text-shadow: 
+    .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8, 
+  
+    .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757,
+    .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757,
+    .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757, 
+  
+    .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b, 
+    .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b,
+    .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
+  }
