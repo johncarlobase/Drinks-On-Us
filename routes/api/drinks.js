@@ -12,14 +12,6 @@ router
 	.put(drinksController.update)
 	.delete(drinksController.remove);
 
-
-// Matches with "/api/drinks/brewery
-router
-.route("/brewery")
-.get('http://sandbox-api.brewerydb.com/v2/styles/?key=c56ca9644f7b0bf60f4ee67fc5520777')
-.then(function(response) {
-    console.log(response.data);
-  })
  
 
 
