@@ -31,7 +31,7 @@ function Nav() {
             to="/brewery"
             className={window.location.pathname === "/brewery" ? "nav-link active" : "nav-link"}
           >
-          Breweries
+          Brewery
           </Link>
         </li>
         <li className="nav-item nav">
@@ -42,15 +42,15 @@ function Nav() {
            Wine
           </Link>
         </li>
-		<li className="nav-item nav">
+		
+        <li className="nav-item nav">
           <Link
-            to="/details"
-            className={window.location.pathname === "/details" ? "nav-link active" : "nav-link"}
+            to="/test"
+            className={window.location.pathname === "/test" ? "nav-link active" : "nav-link"}
           >
-           Details
+           Test
           </Link>
         </li>
-
 
       </ul>
     </div>
