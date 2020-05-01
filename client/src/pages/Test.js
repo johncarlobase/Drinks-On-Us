@@ -1,28 +1,31 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Nav from "../components/Nav";
-import Input from "../components/Input";
 import Button from "../components/Button";
 import API from "../Utils/API";
 import { BeerList, BeerListItem } from "../components/BeerList";
 import { Container, Row, Col } from "../components/Grid";
-
+import Input from "../components/Input";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+ 
 
 
 class Brewery extends Component {
   state = {
     beers: [],
-    beerSearch: ""
-
-
+    beerSearch: "",
+    cities: [],
+    beerCity: "",
+    states: [],
+    beerState: ""
   };
   handleInputChange = event => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
-    //const { name, value } = event.target;
+    // Destructure the name and value properties off of event.target   // Update the appropriate state     //const { name, value } = event.target;
     this.setState({
       beerSearch: event.target.value,
- 
+      beerCity: event.target.value,
+      beerState: event.target.value,
     });
   };
   handleFormSubmit = event => {
@@ -35,7 +38,28 @@ class Brewery extends Component {
       })
       .catch(err => console.log(err));
   };
+  handleFormSubmit = event => {
+    // When the form is submitted, prevent its default behavior, get beers update the beers state
+    event.preventDefault();
+    API.getCity(this.state.beerCity)
+      .then(res =>{
+        console.log(res)
+        this.setState({ cities: res.data })
+      })
+      .catch(err => console.log(err));
+  };
 
+
+  handleFormSubmit = event => {
+    // When the form is submitted, prevent its default behavior, get beers update the beers state
+    event.preventDefault();
+    API.getState(this.state.beer)
+      .then(res =>{
+        console.log(res)
+        this.setState({ states: res.data })
+      })
+      .catch(err => console.log(err));
+  };
 
 
 
@@ -44,9 +68,25 @@ class Brewery extends Component {
       <div>
           <Jumbotron />
         <Nav />
-       
-                 
-        <Container>
+        <Tabs>
+    <TabList>
+      <Tab>City Search</Tab>
+      <Tab>State Search</Tab>
+      <Tab>General Search</Tab>
+    </TabList>
+ 
+    <TabPanel>
+   <h1>some bullshit</h1>
+    </TabPanel>
+    
+    
+    <TabPanel>
+    <h1>some more bullshit</h1> 
+    </TabPanel>
+
+
+    <TabPanel>          
+    <Container>
           {/* Row that holds the search input */}
           <Row className = "row">
             <Col size="md-12">
@@ -54,7 +94,6 @@ class Brewery extends Component {
                 <Container>
                   <Row>
                  
-
                     <h1 className ="enter">Enter A Brewery To Search For</h1>
                     <Col size="xs-9 sm-10">
                    
@@ -113,20 +152,11 @@ class Brewery extends Component {
           </Row>
         </Container>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    </TabPanel>
+  </Tabs>
+                 
+    
 
       </div>
     );
