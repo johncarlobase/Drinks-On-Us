@@ -6,6 +6,7 @@ import Detail from "./pages/Detail";
 import Drinks from "./pages/Drinks";
 import Brewery from "./pages/Brewery";
 import Wine from "./pages/Wine";
+import Test from "./pages/Test";
 import Wrapper from "./components/Wrapper";
 
 
@@ -23,7 +24,7 @@ function App() {
 			  <Route exact path="/drinks" component={Drinks} />
      	      <Route exact path="/brewery" component={Brewery} />
 			  <Route exact path="/wine" component={Wine} />
-       
+			  <Route exact path="/test" component={Test} />
         </Wrapper>
      
       </div>
