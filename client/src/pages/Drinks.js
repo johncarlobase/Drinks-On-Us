@@ -1,20 +1,22 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Jumbotron from "../components/Jumbotron";
 import Nav from "../components/Nav";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import API from "../Utils/API";
 import { DrinkList, DrinkListItem } from "../components/DrinkList";
+// import { IngredientList, IngredientListItem } from "../components/IngredientList";
+// import DetailBreakdown from "../components/DetailBreakdown"
 import { Container, Row, Col } from "../components/Grid";
-import { IngredientList, IngredientListItem } from "../components/IngredientList";
+
 
 
 class Drinks extends Component {
   state = {
     drinks: [],
     drinkSearch: "",
-    ingredients: []
+    ingredients: [],
+    drinkID: []
   };
   handleInputChange = event => {
     // Destructure the name and value properties off of event.target
@@ -31,20 +33,24 @@ class Drinks extends Component {
       .then(res =>{
         console.log(res)
         this.setState({ drinks: res.data.drinks })
+        this.setState({drinkID: res.data.drinks.idDrink})
       })
       .catch(err => console.log(err));
   };
 
-  async generateIngredients() {
-    const ingr = await axios.get(`https://www.thecocktaildb.com/api/json/v1/c22e73525cmshd4b903fea7d9db9p1297efjsn1aadaafbd701/list.php?i=list`);
-
-    
-  };
+  loadDetails = event => {
+    event.preventDefault();
+    API.fullDetails(this.state.drinkID)
+      .then(res =>{
+        console.log(res)
+        this.setState({ingredients: res.data.strIngredient1})
+      })
+  }
 
   showIngredients = event => {
     event.preventDefault();
     API.ingredientList(this.state)
-    console.log(this.state)
+      console.log(this.state)
       .then(res => {
         console.log(res)
         this.setState({ ingredients: res.data.drinks})
@@ -81,7 +87,7 @@ class Drinks extends Component {
                         className="input-lg">
                         Search
                       </Button>
-                      <Button onClick={this.generateIngredients}>Ingredients</Button>
+                      {/* <Button onClick={this.generateIngredients}>Ingredients</Button> */}
                     </Col>
                   </Row>
                 </Container>
@@ -113,7 +119,7 @@ class Drinks extends Component {
               )}
             </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col size="xs-12">
               {this.state.ingredients.length ? (
                   <IngredientList>
@@ -130,7 +136,7 @@ class Drinks extends Component {
                 <h4 className="text-center no-bee">No Ingredients to Display</h4>
               )}
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </div>
     );

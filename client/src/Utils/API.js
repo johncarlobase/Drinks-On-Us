@@ -75,6 +75,22 @@ export default {
     })
   },
 
+  fullDetails: function(drinkID) {
+    return axios({
+      "method":"GET",
+      "url":"https://the-cocktail-db.p.rapidapi.com/lookup.php",
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"the-cocktail-db.p.rapidapi.com",
+      "x-rapidapi-key":"c22e73525cmshd4b903fea7d9db9p1297efjsn1aadaafbd701"
+      },"params":{
+      "i": drinkID
+      }
+      }).then((response)=>{
+        console.log(response)
+      })
+  },
+
   ingredientList: function() {
     return axios({
       "method":"GET",
