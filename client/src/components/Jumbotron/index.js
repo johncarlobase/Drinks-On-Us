@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
-
+import Nav from "../Nav";
+import { Container } from "../Grid";
 
 function Jumbotron(props) {
   return (
@@ -9,12 +10,20 @@ function Jumbotron(props) {
        <div className ="wrapper"> 
         <div className ="neon-wrapper"> 
          <div className ="neon-text"> Drinks Are On Us!</div>
-        
+     
          </div>
         </div>
       </div>
+     
+     <Container>
+      <div className = " navBar">  
+         <Nav />
+      </div>
+      </Container>
     </div>
+   
   )
+  
 }
 
 export default Jumbotron;
