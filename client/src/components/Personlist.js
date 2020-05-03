@@ -1,15 +1,11 @@
-import React from './node_modules/react';
-import axios from './node_modules/axios';
+import React from 'react';
+import axios from 'axios';
 
-export default class PersonList extends React.Component {
+
+export default class Beer extends React.Component {
   state = {
     beers: []
   }
-  //let apiToken ="5900c020fd88621ce8361c96bcbb368ac97e2fb8"
-
- // Authorization: Token {5900c020fd88621ce8361c96bcbb368ac97e2fb8}
-
-
 
   componentDidMount() {
 
@@ -27,16 +23,12 @@ export default class PersonList extends React.Component {
     return (
       <ul>
         { this.state.beers.map(beer => <li>{beer.name}</li>)}
+
+    
       </ul>
-
-
-
-
-
 
 
 
     )
   }
 }
-

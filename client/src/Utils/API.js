@@ -1,7 +1,6 @@
 import axios from "axios";
 export default {
   getBeers: function (beerSearch) {
-
     return axios({
       "method": "GET",
       "url": "https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search",
@@ -16,6 +15,111 @@ export default {
     })
 
   },
+
+
+  getCity: function (beerCity) {
+    return axios({
+      "method": "GET",
+      "url": "https://api.openbrewerydb.org/breweries?per_page=100&by_city=" + beerCity,
+      "headers": {
+        "content-type": "application/octet-stream",
+        "x-rapidapi-host": "brianiswu-open-brewery-db-v1.p.rapidapi.com",
+        "x-rapidapi-key": "dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502"
+      },
+      "params": {
+        "query": beerCity
+      }
+    })
+
+  },
+  getState: function (beerState) {
+    return axios({
+      "method": "GET",
+      "url": "https://api.openbrewerydb.org/breweries?per_page=100&by_state=" + beerState,
+      "headers": {
+        "content-type": "application/octet-stream",
+        "x-rapidapi-host": "brianiswu-open-brewery-db-v1.p.rapidapi.com",
+        "x-rapidapi-key": "dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502"
+      },
+      "params": {
+        "query": beerState
+      }
+    })
+
+  },
+
+  getColors: function (colorSearch) {
+    return axios({
+      "method":"GET",
+      "url":"https://globalwinescore-global-wine-score-v1.p.rapidapi.com/globalwinescores/latest/?color=" + colorSearch,
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"globalwinescore-global-wine-score-v1.p.rapidapi.com",
+      "x-rapidapi-key":"dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502",
+      'Authorization': 'Token 5900c020fd88621ce8361c96bcbb368ac97e2fb8',
+      "accept":"application/json"
+      },"params":{
+      "limit":"100",
+      "ordering":"-score"
+      }
+    })
+  },
+    getVintages: function (vintageSearch) {
+      return axios({
+        "method":"GET",
+        "url":"https://globalwinescore-global-wine-score-v1.p.rapidapi.com/globalwinescores/latest/?vintage=" + vintageSearch,
+        "headers":{
+        "content-type":"application/octet-stream",
+        "x-rapidapi-host":"globalwinescore-global-wine-score-v1.p.rapidapi.com",
+        "x-rapidapi-key":"dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502",
+        'Authorization': 'Token 5900c020fd88621ce8361c96bcbb368ac97e2fb8',
+        "accept":"application/json"
+        },"params":{
+        "limit":"100",
+        "ordering":"-score"
+        }
+      })
+    },
+  
+      getCountrys: function (countrySearch) {
+        return axios({
+          "method":"GET",
+          "url":"https://globalwinescore-global-wine-score-v1.p.rapidapi.com/globalwinescores/latest/?country=" + countrySearch,
+          "headers":{
+          "content-type":"application/octet-stream",
+          "x-rapidapi-host":"globalwinescore-global-wine-score-v1.p.rapidapi.com",
+          "x-rapidapi-key":"dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502",
+          'Authorization': 'Token 5900c020fd88621ce8361c96bcbb368ac97e2fb8',
+          "accept":"application/json"
+          },"params":{
+          "limit":"100",
+          "ordering":"-score"
+          }
+        })
+      
+  
+  
+  },
+
+  getBeerDB: function (beerDBSearch) {
+    return axios({
+      "method":"GET",
+      "url":"https://globalwinescore-global-wine-score-v1.p.rapidapi.com/globalwinescores/latest/?country=" + beerDBSearch,
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"globalwinescore-global-wine-score-v1.p.rapidapi.com",
+      "x-rapidapi-key":"dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502",
+      'Authorization': 'Token 5900c020fd88621ce8361c96bcbb368ac97e2fb8',
+      "accept":"application/json"
+      },"params":{
+      "limit":"100",
+      "ordering":"-score"
+      }
+    })
+  
+
+
+},
 
   // Gets all drinks
   getDrinks: function () {
@@ -38,9 +142,7 @@ export default {
   },
 
 
-getBrewery: function(){
-return axios.get("/api/brewery")
-}
+
 
 
 

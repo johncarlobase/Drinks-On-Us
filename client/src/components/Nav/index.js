@@ -4,7 +4,8 @@ import "./style.css";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    // <nav className="navbar navbar-expand-lg navbar-dark bg-transparent navbar-default">   
+    <nav className="navbar navbar-expand-lg  bg-transparent navbar-default">   
     <div>
       <ul className="navbar-nav">
         <li className="nav-item nav">
@@ -31,27 +32,38 @@ function Nav() {
             to="/brewery"
             className={window.location.pathname === "/brewery" ? "nav-link active" : "nav-link"}
           >
-          Breweries
+          Brewery
           </Link>
         </li>
+
+        <li className="nav-item nav">
+          <Link
+            to="/wine_score"
+            className={window.location.pathname === "/wine_score" ? "nav-link active" : "nav-link"}
+          >
+           Wine-Score
+          </Link>
+        </li>
+        
+
         <li className="nav-item nav">
           <Link
             to="/wine"
             className={window.location.pathname === "/wine" ? "nav-link active" : "nav-link"}
           >
-           Wine
+           Test
           </Link>
         </li>
-		<li className="nav-item nav">
+		
+        
+        <li className="nav-item nav">
           <Link
-            to="/details"
-            className={window.location.pathname === "/details" ? "nav-link active" : "nav-link"}
+            to="/login"
+            className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
           >
-           Details
+           Test Login
           </Link>
         </li>
-
-
       </ul>
     </div>
   </nav>
