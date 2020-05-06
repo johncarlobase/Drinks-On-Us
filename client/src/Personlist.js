@@ -1,56 +1,46 @@
-import React from './node_modules/react';
-import axios from './node_modules/axios';
+import React from 'react';
+
+
 
 export default class PersonList extends React.Component {
   state = {
-    beers: []
+    filters: []
   }
- 
-
 
   componentDidMount() {
-
-    const getWines = (num) => {
-      axios.get(
-          `https://api.globalwinescore.com/globalwinescores/latest?limit=${num}`,
-          {
-            "headers": {"Authorization": "Token 5900c020fd88621ce8361c96bcbb368ac97e2fb8"}
-          }
-        ).then(res => {
-          let results = res.results
-          let wines = []
-          results.forEach(wine => {
-            let currentWine = {
-              name: wine.name,
-              age: wine.date,
-              color: wine.color,
-              regions: wine.regions[0],
-              score: wine.score
-            }
-            wines.push(currentWine)
-          });
-            console.log(wines)
-        })
+    const axios = require("axios");
+    axios({
+      "method":"GET",
+      "url":"https://the-cocktail-db.p.rapidapi.com/filter.php",
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"the-cocktail-db.p.rapidapi.com",
+      "x-rapidapi-key":"dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502"
+      },"params":{
+      "c":"Cocktail"
       }
-    getWines(25)
-    
- 
+      })
+      .then((response)=>{
+        console.log(response)
+        const filters = response.data.drinks;
+            this.setState({ filters });
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
   }
 
   render() {
     return (
       <ul>
-        { this.state.beers.map(beer => <li>{beer.name}</li>)}
+        { this.state.filters.map(filter => 
+        <li>{filter.strDrink}</li>)}
+
+    
       </ul>
-
-
-
-
-
 
 
 
     )
   }
 }
-

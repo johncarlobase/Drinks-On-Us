@@ -1,15 +1,21 @@
 import React from 'react';
-// import Nav from "../components/Nav";
 import Jumbotron from "../components/Jumbotron"
-
-
+import Cocktails from "../components/Cocktails"
+// import PersonList from "../Personlist"
 function App() {
   return (
     <div className="App">
      <Jumbotron />     
-     {/* <Nav /> */}
-     
-      <h1>Test</h1>
+     <Cocktails />
+  
+     {/* <PersonList /> */}
+
+
+
+
+
+
+
 
     </div>
   );
