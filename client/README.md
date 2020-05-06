@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Drinks-On-Us
+    A simple app to give you ideas on what you can drink for today. When you are tired of the ol' Rum and Coke. 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Motivation
+Stuck at home in Quarantine?  Make it a day of Quarandrinkin' with our app!  
 
-### `npm start`
+    April 2020,  Covid-19 Quarantine and we were asked to think of a project that can be useful to the public.  So we thought to scratch event apps, socialization, meetups or any public gathering. Since everybody is at home and liquor stores are open. And headlines such as this: [news headline](https://abc7amarillo.com/news/local/pandemic-leads-to-increased-alcohol-sales-at-liquor-stores)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Drinks on us jumbotron](image)
 
-### `npm test`
+## Tech/framework used
+![MERN](mern image)
+<b>Built with</b>
+- [Mongo] (https://www.mongodb.com/)
+- [Robo3T] (https://www.robomongo.org/)
+- [Express] (https://www.npmjs.com/package/express)
+- [React] (https://reactjs.org/)
+- [Node] (https://nodejs.org/en/)
+- [Visual Code] (https://code.visualstudio.com/)
+- [Heroku] (https://www.heroku.com/home)
+- [mLabs] (https://mlab.com/)
+- [github] (https://github.com/)
+- [Cocktail DB] (https://www.thecocktaildb.com/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<b>Dependencies</b>
+- [Axios] (https://www.npmjs.com/package/axios)
+- [Concurrently] (https://www.npmjs.com/package/concurrently)
+- [E-mail Validator] (https://www.npmjs.com/package/email-validator)
+- [Express] (https://www.npmjs.com/package/express)
+- [Formik] (https://www.npmjs.com/package/formik)
+- [mongoose] (https://www.npmjs.com/package/mongoose)
+- [nodemon] (https://www.npmjs.com/package/nodemon)
+- [yup] (https://www.npmjs.com/package/yup)
+- [bootstrap] (https://www.npmjs.com/package/bootstrap)
+- [i] (https://www.npmjs.com/package/i)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Features
+Search a drink by ingredient, search Random drinks, Search Beer, Brewery, maybe Wine too!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API Reference
+-[Cocktail DB] (https://www.thecocktaildb.com/)
 
-### `npm run eject`
+## Contributors
+- [Mike Nezzer] (https://github.com/mnezz1131)
+- [Evan Morisato] (https://github.com/evanmorisato)
+- [John Carlo Base] (https://github.com/johncarlobase)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Anything else that seems useful
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -33,7 +33,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-	process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword>@ds011291.mlab.com:11291/heroku_6q7qqzs5",
+	process.env.MONGODB_URI || "mongodb://localhost/DRINKS_DB",
 	{ useNewUrlParser: true }
 );
 
