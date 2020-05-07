@@ -5,14 +5,14 @@
 ## Motivation
 Stuck at home in Quarantine?  Make it a day of Quarandrinkin' with our app!  
 
-    April 2020,  Covid-19 Quarantine and we were asked to think of a project that can be useful to the public.  So we thought to scratch event apps, socialization, meetups or any public gathering. Since everybody is at home and liquor stores are open. And headlines such as this: [news headline](https://abc7amarillo.com/news/local/pandemic-leads-to-increased-alcohol-sales-at-liquor-stores)
+    April 2020,  Covid-19 Quarantine and we were asked to think of a project that can be useful to the public.  So we thought to scratch event apps, socialization, meetups or any public gathering. Since everybody is at home and liquor stores are open. And headlines such as this: [news headline](https://github.com/johncarlobase/Drinks-On-Us/blob/Carlo/client/public/img/news.png)
 
 ## Screenshots
 
-![Drinks on us jumbotron](image)
+![Drinks on us jumbotron](https://github.com/johncarlobase/Drinks-On-Us/blob/Carlo/client/public/img/dou.png)
 
 ## Tech/framework used
-![MERN](mern image)
+![MERN](https://github.com/johncarlobase/Drinks-On-Us/blob/Carlo/client/public/img/mern.jpg)
 <b>Built with</b>
 - [Mongo] (https://www.mongodb.com/)
 - [Robo3T] (https://www.robomongo.org/)
