@@ -32,10 +32,16 @@ app.use(function(req, res, next) {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(
-	process.env.MONGODB_URI || "mongodb://localhost/DRINKS_DB",
-	{ useNewUrlParser: true }
-);
+if (process.env.PRODUCTION) {
+	mongoose.connect(
+		process.env.MONGODB_URI || "mongodb://heroku_6q7qqzs5:3v8b0al9e87hm7norttcsj2sjn@ds011291.mlab.com:11291/heroku_6q7qqzs5",
+		{ useNewUrlParser: true }
+)}else {
+	mongoose.connect(
+		process.env.MONGODB_URI || "mongodb://localhost/DRINKS_DB",
+		{ useNewUrlParser: true }
+
+	)}
 
 // Start the API server
 app.listen(PORT, function () {
