@@ -5,7 +5,7 @@ import { Container } from "../Grid";
 
 function Jumbotron(props) {
   return (
-    <div className="jumbotron jumbotron-fluid">
+    <div className="jumbotron jumbotron-fluid ">
       <div className="container">{props.children}
        <div className ="wrapper"> 
         <div className ="neon-wrapper"> 

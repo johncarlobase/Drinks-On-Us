@@ -1,6 +1,6 @@
 import React from 'react';
 import Jumbotron from "../components/Jumbotron"
-// import Cocktails from "../components/Cocktails"
+ import Personlist from "../Personlist"
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
 
 <h1>Drinks yo!! Get yo swerve on</h1>
 
-
+<Personlist />
 
 
 

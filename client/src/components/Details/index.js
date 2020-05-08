@@ -1,41 +1,45 @@
 import React from 'react';
-import API from "../src/Utils/API";
+import API from "../../Utils/API";
 
-export default class PersonList extends React.Component {
+export default class Details extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   state = {
-    details: [],
+    details: this.props.details,
     idSearch: "idDrink", 
   };
  
-  handleClick = event => {
-    event.preventDefault();
-    API.getDrinkId("14888")
-      .then(res =>{
-        console.log(res)
-        this.setState({ details: res.data.drinks })
-      })
-      .catch(err => console.log(err));
-  };
 
 
+//   drinksMap = (details) => {
+//     let result = {}
+//     for (const key in details) {
+//         if (details.hasOwnProperty(key)) {
+//             const element = details[key]
+//             if (element) {
+//                 result[key] = element
+//             }
+//         }
+//     }
+//     return result
+// }
 
-  render() {
+
+render() {
     return (
-      <div>
+<div>
 
-   
-     <button
-     onClick={this.handleClick}
-     type="success"
-     className="input-lg">
-     Search
-     </button>
-     
-    <ul>
-        { this.state.details.map(detail => 
-       
-        <div>
-       <li>Drink : {detail.strDrink}</li> 
+  <ul>
+
+       { this.state.details.map(detail => 
+
+
+
+        <div key = {detail.idDrink}>
+
+        <li>Drink : {detail.strDrink}</li> 
         <li>Category : {detail.strCategory}</li>
         <li>Type : {detail.strAlcoholic}</li>
         <li>Served In : {detail.strGlass}</li>
@@ -56,12 +60,10 @@ export default class PersonList extends React.Component {
         <li>Ingredient14 : {detail.strIngredient14}  - {detail.strMeasure14}</li>
         <li>Ingredient15 : {detail.strIngredient15}  - {detail.strMeasure15}</li>
 
-        </div>)}
-      </ul>
+      </div>)}
+  </ul>
 
-
-
-      </div>
+</div>
     );
   }
 }

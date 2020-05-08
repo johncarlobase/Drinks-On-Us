@@ -1,20 +1,15 @@
 import React from 'react';
 import Jumbotron from "../components/Jumbotron"
 import Cocktails from "../components/Cocktails"
-// import PersonList from "../Personlist"
+
+//import { Container, Row, Col } from "../components/Grid";
 function App() {
   return (
     <div className="App">
      <Jumbotron />     
-     <Cocktails />
   
-     {/* <PersonList /> */}
 
-
-
-
-
-
+     <Cocktails />
 
 
     </div>
