@@ -75,6 +75,10 @@ export default {
     })
   },
 
+  getDrink2: function (query) {
+    return axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`);
+  },
+
   fullDetails: function(drinkID) {
     return axios({
       "method":"GET",

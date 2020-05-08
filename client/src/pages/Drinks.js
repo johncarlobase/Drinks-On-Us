@@ -16,7 +16,10 @@ class Drinks extends Component {
     drinks: [],
     drinkSearch: "",
     ingredients: [],
-    drinkID: []
+    drinkID: [],
+    data1: [],
+    data2: [],
+    combinedData: []
   };
   handleInputChange = event => {
     // Destructure the name and value properties off of event.target
@@ -26,10 +29,22 @@ class Drinks extends Component {
       drinkSearch: event.target.value
     });
   };
+
+  makeDrink = drinkData => {
+    return {
+      name: drinkData.drinks.name,
+      ingredients: drinkData.drinks.ingredients,
+      instructions: drinkData.drinks.strInstructions,
+      glass: drinkData.drinks.strGlass,
+      image: drinkData.drinks.thumbnail
+    }
+  };
+
+
   handleFormSubmit = event => {
     // When the form is submitted, prevent its default behavior, get drinks update the drinks state
     event.preventDefault();
-    API.getDrinkAPI(this.state.drinkSearch)
+    API.getDrink2(this.state.drinkSearch)
       .then(res =>{
         console.log(res)
         this.setState({ drinks: res.data.drinks })
@@ -57,6 +72,36 @@ class Drinks extends Component {
       })
       .catch(err => console.log(err));
   }
+
+    // const api1 = (event) => {
+  //   event.preventDefault();
+  //   API.getDrinkAPI(this.state.drinkSearch)
+  //     .then(res => {
+  //       console.log(res)
+  //       this.setState({ 
+  //         drinks: res.data.drinks,
+  //         drinkID: res.data.drinks.idDrink
+  //        })
+  //     })
+  // };
+
+  // const api2 = (event) => {
+  //   event.preventDefault();
+  //   API.fullDetails(this.state.drinkID)
+  //     .then(res => {
+  //       console.log(res)
+  //       this.setState({
+  //         data2: res.data.drinks
+  //       })
+  //     })
+  // };
+
+  // handleApiCalls = () => {
+  //   !this.state.drinks ? api1() : console.log("There is data in data1");
+
+  //   !this.state.data2 ? api2() : console.log("There is data in data2")
+  //   console.log(data2);
+  // }
   
   render() {
     return (
