@@ -74,7 +74,8 @@ handleFormSubmit2 = event => {
           <Tab>City Brewery Search</Tab>
           <Tab>State Brewery Search</Tab>
         </TabList>
-            <TabPanel>
+        {/* This is tab panel 1 */}
+            <TabPanel>  
               <Container>
               {/* Row that holds the search input */}
               <Row className = "row">
@@ -135,8 +136,9 @@ handleFormSubmit2 = event => {
           </Row>
         </Container>
     </TabPanel>
-{/* The city brewery search and results tab */}
-<TabPanel>
+{/* End of tab panel 1 */}
+{/* Beginning of Tab Panel 2 */}
+      <TabPanel>
               <Container>
               {/* Row that holds the search input */}
               <Row className = "row">
@@ -197,8 +199,8 @@ handleFormSubmit2 = event => {
           </Row>
         </Container>
     </TabPanel>
-
-    {/* The state brewery search and results tab */}
+{/* End of tab panel 2 */}
+ {/*Beginning of Tab Panel 3*/}
     <TabPanel>
               <Container>
               {/* Row that holds the search input */}
@@ -260,69 +262,8 @@ handleFormSubmit2 = event => {
           </Row>
         </Container>
     </TabPanel>
- {/* The city brewery search and results tab */}
-    <TabPanel>
-              <Container>
-              {/* Row that holds the search input */}
-              <Row className = "row">
-                <Col size="md-12">
-                  <form>
-                   <Container>
-                      <Row>
-                      <h1 className ="enter">Enter A City To Search For A Brewery List</h1>
-                      <Col size="xs-9 sm-10">
-                      <Input
-                        name="beerCity"
-                        value={this.state.beerCity}
-                        onChange={this.handleInputChange}
-                        placeholder="Search For A City"/>
-                        </Col>
-                        {/* Row that holds the search input */}
-                         <Col size="xs-3 sm-2">
-                           <Button
-                             onClick={this.handleFormSubmit}
-                             type="success"
-                             className="input-lg">
-                             Search
-                          </Button>
-                         </Col>
-                        </Row>
-                    </Container>
-                  </form>
-            </Col>
-          </Row>
-          {/* Row Ends that holds the search*/}
-          <Row>
-            <Col size="xs-12">
-              {this.state.cities.length ? (
-                  <BeerList>
-                  {this.state.cities.map(city => {
-                    console.log(city);
-                    return (
-                      <BeerListItem
-                        key={city.id}
-                        name={city.name}
-                        brewery_type={city.brewery_type}
-                        city={city.city}
-                        street={city.street}
-                        state={city.state}
-                        postal_code={city.postal_code}
-                        id={city.id}
-                        phone={city.phone}
-                        website_url={city.website_url}
-                        onClick={API.savebeer}
-                        />
-                        );
-                      })}
-                </BeerList>
-              ) : (
-                <h4 className="text-center no-bee">No City Breweries to Display</h4>
-              )}
-            </Col>
-          </Row>
-        </Container>
-    </TabPanel>
-	
+ {/* End of tab panel 3 */}
+
     </Tabs>
         
 

@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
      <Jumbotron />     
-     <h1>Famous Alchohol Quotes</h1>
+ 
      <QuoteList/> 
      
      
