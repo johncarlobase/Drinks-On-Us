@@ -38,15 +38,13 @@ export default class Cocktails extends React.Component {
     selectedDrink:""
   }
  
-  selectDrink = id => {
-    this.setState({selectedDrink: id})
-    console.log("select drunk is " + id)
-  }
+  // selectDrink = id => {
+  //   this.setState({selectedDrink: id})
+  //   console.log("select drunk is " + id)
+  // }
 
 
     handleClick = (event) => {
-
-    
     // When the form is submitted, prevent its default behavior, get beers update the beers state
     event.preventDefault();
     API.getDrinkFilter(event.target.value)

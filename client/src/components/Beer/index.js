@@ -3,13 +3,12 @@ import React from 'react';
 import { Container } from '../Grid';
 import {Table }from 'react-bootstrap';
 
-// import express from 'express';
-// import request from 'request';
+
 
 export default class Wine extends React.Component {
   state = {
     beers: [],
-    randoms: []
+
   }
 
   componentDidMount() {
@@ -23,20 +22,7 @@ export default class Wine extends React.Component {
         this.setState({ beers });
       })
     
-      axios.get('https://cors-anywhere.herokuapp.com/http://sandbox-api.brewerydb.com/v2/beer/random?key=c56ca9644f7b0bf60f4ee67fc5520777')
-      .then(res => {
-       console.log(res)
-        const randoms = res.data.data;
-        this.setState({ randoms });
-      })
   }
-
-  
-//   <div>
-//   <ul>
-//    { this.state.randoms.map(random => <li>{random.name}</li>)}
-//   </ul>
-// </div>
 
   render() {
     return (
@@ -44,6 +30,7 @@ export default class Wine extends React.Component {
         { this.state.beers.map(beer =>
      <div>
        <Container>  
+    
            <Table striped bordered hover responsive variant="dark" size="sm">
           <thead>
             <tr>
