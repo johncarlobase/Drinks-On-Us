@@ -1,0 +1,14 @@
+.beer{
+    background-image: url(./beer.jpg);
+   
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+
+p{
+    color: hsl(235, 75%, 38%);
+    font-size: 20px;
+    width: 100%;
+    background-color: lightgrey;
+}

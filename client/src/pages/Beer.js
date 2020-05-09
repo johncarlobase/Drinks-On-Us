@@ -6,8 +6,10 @@ import { Container, Row, Col } from '../components/Grid';
 import {Card, Accordion, Button }from 'react-bootstrap';
 import abv1 from "../components/Beer/abv1.png"
 import IBU from "../components/Beer/IBU.PNG"
-import SRM from "../components/Beer/SRM.png"
+import SRM from "../components/Beer/srm.PNG"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./style.css";
+
 
 
 const cardStyle = {
