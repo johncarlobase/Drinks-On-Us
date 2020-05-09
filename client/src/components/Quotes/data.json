@@ -107,7 +107,7 @@
       
         "quoteText" : "In wine there is wisdom, in beer there is Freedom, in water there is bacteria.",
 		"author":"Benjamin Franklin",
-        "img" : "https://images.gr-assets.com/authors/1306133803p2/14033.jpg"
+        "img" : "https://images.gr-assets.com/authors/1215314094p2/289513.jpg"
     },
     {
         "quoteText": "Here's to alcohol, the rose colored glasses of life..",
@@ -340,5 +340,53 @@
         "quoteText" :"Some people are extroverts only when they are drunk.",
 		"author":"Mokokoma Mokhonoana",
         "img" : "https://images.gr-assets.com/authors/1575898035p2/7152008.jpg"
+    },
+    {
+       
+        "quoteText":"I feel sorry for people who don't drink. When they wake up in the morning that's as good as they're going to feel all day.",
+        "author":" Frank Sinatra",
+        "img" : "https://images.gr-assets.com/authors/1207679684p2/220471.jpg"
+    },
+    {
+       
+        "quoteText":"The problem with some people is that when they aren't drunk they're sober.",
+        "author":"William Butler Yeats",
+        "img" : "https://images.gr-assets.com/authors/1440689155p2/29963.jpg"
+    },
+    {
+      
+        "quoteText" :"You're not drunk if you can lie on the floor without holding on",
+		"author" : "Dean Martin",
+        "img" : "https://images.gr-assets.com/authors/1208274380p2/590855.jpg"
+    },
+    {
+       
+        "quoteText":"Work is the curse of the drinking classes.",
+        "author":"Oscar Wilde",
+        "img" : "https://images.gr-assets.com/authors/1521044377p2/3565.jpg"
+    },
+    {
+      
+        "quoteText" :  "A woman drove me to drink and I didn't even have the decency to thank her.",
+		"author":"W.C. Fields",
+        "img" : "https://images.gr-assets.com/authors/1331712829p2/82951.jpg"
+    },
+    {
+      
+        "quoteText" :  "It takes only one drink to get me drunk.....the trouble is, I can't remember if it's the thirteenth or the fourteenth",
+		"author":"George Burns",
+        "img" : "https://images.gr-assets.com/authors/1248450358p2/43259.jpg"
+    },
+    {
+      
+        "quoteText" :  "All right, brain. You don't like me and I don't like you, but let's just do this and I can get back to killing you with beer.",
+		"author":"Homer Simpson - Matt Groening",
+        "img" : "https://images.gr-assets.com/authors/1198682012p2/30808.jpg"
+    },
+    {
+       
+        "quoteText":"24 hours in a day. 24 beers in a case. Coincidence? I think not.",
+        "author":"H.L. Mencken",
+        "img" : "https://images.gr-assets.com/authors/1399814051p2/7805.jpg"
     }
 ]

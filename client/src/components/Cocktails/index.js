@@ -3,12 +3,12 @@ import React from 'react';
 import "./style.css";
 import {Table }from 'react-bootstrap';
 import API from "../../Utils/API";
-import DrinkListItem  from "../DrinkList";
+import { DrinkList} from "../DrinkList";
+import DrinkListItem from "../DrinkListItem";
 // import Button from "../Button";
 
 export default class Cocktails extends React.Component {
  componentDidMount() {    
-  
     const axios = require("axios"); 
      axios({
         "method":"GET",
@@ -35,38 +35,35 @@ export default class Cocktails extends React.Component {
     drinks: [],
     filters: [],
     filterSearch:"strCategory",
-    details: [],
-    detailSearch:"strCategory"
+    selectedDrink:""
   }
  
+  selectDrink = id => {
+    this.setState({selectedDrink: id})
+    console.log("select drunk is " + id)
+  }
+
+
     handleClick = (event) => {
+
+    
     // When the form is submitted, prevent its default behavior, get beers update the beers state
     event.preventDefault();
     API.getDrinkFilter(event.target.value)
       .then(response =>{
         console.log(response)
-        this.setState({ filters: response.data.drinks })
-        
-        API.getDrinkId(event.target.value)
-        .then(response =>{
-          console.log(response)
-          this.setState({ details: response.data.drinks })  
-        })
-        
-
+        this.setState({ filters: response.data.drinks })  
       })
       .catch(err => console.log(err));
     };
 
-
-
   render() {
     //  console.log(API.getDrinkFilter(filterSearch))
     return (
-<div> 
+<div key> 
         { this.state.drinks.map(drink =>
      
-   <div className="block ">   
+   <div className="block " key={drink.strCategory}>   
   <Table striped bordered hover responsive size="sm">
       <thead className='table'>
        <tr>
@@ -74,7 +71,7 @@ export default class Cocktails extends React.Component {
          <button
            key={drink.strCategory}
            onClick={this.handleClick}
-          id={drink.strCategory}
+            id={drink.strCategory}
            value={drink.strCategory}
           >{drink.strCategory}</button></th> 
       </tr>
@@ -93,7 +90,6 @@ export default class Cocktails extends React.Component {
                   {this.state.filters.map(filter => {
                     console.log(filter);
                     return (
-
                       <DrinkListItem
                         strDrink={filter.strDrink}
                         idDrink={filter.idDrink}
