@@ -4,7 +4,12 @@ import { Container } from '../Grid';
 import {Table }from 'react-bootstrap';
 import "./style.css";
 
+const tableStyle = {
 
+
+margin: "0 auto"
+
+}
 
 
 export default class Wine extends React.Component {
@@ -23,18 +28,17 @@ export default class Wine extends React.Component {
         const beers = res.data.data;
         this.setState({ beers });
       })
-    
   }
 
   render() {
     return (
    <ul>
         { this.state.beers.map(beer =>
+
      <div className="beer">
-       <Container>  
-    
-           <Table striped bordered hover responsive variant="dark" size="sm">
-          <thead>
+       <Container style={tableStyle}>  
+           <Table striped bordered hover responsive variant="dark" size="sm" >
+            <thead>
             <tr>
               <th>#</th>
               <th>Style</th>
@@ -68,18 +72,6 @@ export default class Wine extends React.Component {
             </tr>  
           </tbody>
         </Table>
-           
-           {/* <p>Beer Name:  {random.name}</p>
-           <p>BeerId: {beer.id}</p>
-           <ul>ABV Maximum =  {beer.abvMax}</ul>
-           <ul>ABV Minimum =  {beer.abvMin}</ul>
-           <ul>IBU Maximum =  {beer.ibuMax}</ul>
-           <ul>IBU Minimum =  {beer.ibuMin}</ul>
-           <ul>SRM Maximum =  {beer.srmMax}</ul>
-           <ul>SRM Minimum =  {beer.srmMin}</ul>
-           <ul>FG Maximum =  {beer.fgMax}</ul>
-           <ul>FG Minimum =  {beer.fgMin}</ul>
-           <ul>OG Minimum =  {beer.ogMin}</ul> */}
            <p>Desciption:  {beer.description}</p>
            <br></br>
        </Container>

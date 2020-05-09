@@ -18,14 +18,11 @@ const cardStyle = {
   backgroundImage: 'url('+bg+')'
 }
 
-
-
 class DrinkListItem extends Component {   
     state = {
         details: []
     }
     componentDidLoad() {
-           // API.getDrinkId(event.target.value)
            API.getDrinkId(this.props.idDrink)
            .then(res =>{
              console.log(res)
@@ -33,11 +30,8 @@ class DrinkListItem extends Component {
            })
            .catch(err => console.log(err));
     }
-
  
-    handleClick = event => {
-       
-        // API.getDrinkId(event.target.value)
+    handleClick = event => {       
         API.getDrinkId(this.props.idDrink)
           .then(res =>{
             console.log(res)

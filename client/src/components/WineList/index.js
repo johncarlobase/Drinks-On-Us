@@ -2,12 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "../Grid";
 // import "./style.css";
 import {Button, Accordion, Card }from 'react-bootstrap';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css";
+
 // Exporting both RecipeList and RecipeListItem from this file
 
-// RecipeList renders a bootstrap list item
+
+
+
 export function WineList({ children }) {
   return <ul className="list-group">{children}</ul>;
 }

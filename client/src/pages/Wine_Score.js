@@ -10,6 +10,11 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import "./style.css";
  
+const h1 ={
+  textAlign: "center",
+  fontFamily:  "'Kumar One', cursive",
+}
+
 
 
 class Wine_Score extends Component {
@@ -68,7 +73,7 @@ class Wine_Score extends Component {
     return (
       <div className="winescore">
           <Jumbotron />
-        {/* <Nav /> */}
+          <Container>
         <Tabs>
     <TabList>
       <Tab>Search by Color</Tab>
@@ -84,7 +89,7 @@ class Wine_Score extends Component {
               <form>
                 <Container>
                   <Row>
-                    <h1 className ="enter">Enter A Wine To Search For - Red, White or Pink</h1>
+                    <h1 className ="enter" style={h1}>Enter A Wine To Search For - Red, White or Pink</h1>
                     <Col size="xs-9 sm-10">
                    
                       <Input
@@ -277,7 +282,7 @@ class Wine_Score extends Component {
     </TabPanel>
   </Tabs>
                  
-    
+  </Container>
 
       </div>
     );
