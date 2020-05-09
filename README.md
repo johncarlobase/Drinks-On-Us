@@ -1,20 +1,29 @@
 PROJECT#3 MARKDOWN
 
 ## Drinks-On-Us
-    A simple app to give you ideas on what you can drink for today. When you are tired of the ol' Rum and Coke. 
+ A simple app to give you ideas on what you can drink for today. When you are tired of the ol' Rum and Coke.  
+ 
+ I mean just go ahead get drunk, you ain’t drivin’!
+
 
 
 ## Motivation
 Stuck at home in Quarantine?  Make it a day of Quarandrinkin' with our app!  
 
-    April 2020,  Covid-19 Quarantine and we were asked to think of a project that can be useful to the public.  So we thought to scratch event apps, socialization, meetups or any public gathering. Since everybody is at home and liquor stores are open. And headlines such as this: [news headline](https://abc7amarillo.com/news/local/pandemic-leads-to-increased-alcohol-sales-at-liquor-stores)
+      <p> April 21, 2020,  for our final class project we were asked to create an app that can be useful to the public. 
+   So we thought to scratch event apps, socialization, meetups or any public gathering (or Tindering) since everybody is quarantined.
+However everybody is at home and liquor stores are open….   hmmm...<p>
+
+    ![news headline](https://github.com/johncarlobase/Drinks-On-Us/blob/master/client/public/img/news.png)
+    
+    
 
 ## Screenshots
 
-![Drinks on us jumbotron](image)
+![Drinks on us jumbotron](https://github.com/johncarlobase/Drinks-On-Us/blob/master/client/public/img/dou.png)
 
 ## Tech/framework used
-![MERN](mern image)
+![MERN](https://github.com/johncarlobase/Drinks-On-Us/blob/master/client/public/img/mern.jpg)
 <b>Built with</b>
 - [Mongo] (https://www.mongodb.com/)
 - [Robo3T] (https://www.robomongo.org/)
@@ -52,5 +61,5 @@ Search a drink by ingredient, search Random drinks, Search Beer, Brewery, maybe 
 - [Evan Morisato] (https://github.com/evanmorisato)
 - [John Carlo Base] (https://github.com/johncarlobase)
 
-#### Anything else that seems useful
+
 
