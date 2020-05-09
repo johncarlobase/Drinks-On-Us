@@ -2,7 +2,10 @@ import React from 'react';
  import axios from 'axios';
 import { Container } from '../Grid';
 import {Table }from 'react-bootstrap';
+import "./style.css";
+
 const tableStyle = {
+
 
 margin: "0 auto"
 
@@ -31,7 +34,8 @@ export default class Wine extends React.Component {
     return (
    <ul>
         { this.state.beers.map(beer =>
-     <div>
+
+     <div className="beer">
        <Container style={tableStyle}>  
            <Table striped bordered hover responsive variant="dark" size="sm" >
             <thead>

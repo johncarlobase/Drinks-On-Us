@@ -5,6 +5,7 @@ import {Card, Accordion, Button }from 'react-bootstrap';
 // import Details from "../Details"
 import API from "../../Utils/API"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./style.css";
 
 
 let bg= require ('../DrinkList/white-marble-3-2018.jpg')
