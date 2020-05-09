@@ -3,7 +3,6 @@ import React,{Component} from "react";
 import { Container, Row, Col } from "../Grid";
 
 import {Card, Accordion, Button }from 'react-bootstrap';
-import Details from "../Details"
 import API from "../../Utils/API"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,9 +11,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class DrinkListItem extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     state = {
         details: []
