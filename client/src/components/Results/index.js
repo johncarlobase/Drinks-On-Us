@@ -37,7 +37,7 @@ class Results extends Component {
                                 <div className="card mb-3" key={result._id}>
                                     <div className="row">
                                         <div className="col-md-2">
-                                            <img alt={result.title} className="img-fluid" src={result.image} />
+                                            <img alt={result.drink} className="img-fluid" src={result.image} />
                                         </div>
                                         <div className="col-md-10">
                                             <div className="card-body">

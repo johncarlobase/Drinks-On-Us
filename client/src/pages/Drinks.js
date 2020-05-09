@@ -1,30 +1,23 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
-import Nav from "../components/Nav";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import API from "../Utils/API";
-import { DrinkList, DrinkListItem } from "../components/DrinkList";
+import DrinkListItem  from "../components/DrinkList";
 // import { IngredientList, IngredientListItem } from "../components/IngredientList";
 // import DetailBreakdown from "../components/DetailBreakdown"
 import { Container, Row, Col } from "../components/Grid";
 
 
 
-class Drinks extends Component {
+class Drinks extends React.Component {
   state = {
     drinks: [],
     drinkSearch: "",
     ingredients: [],
     drinkID: [],
-    data1: [],
-    data2: [],
-    combinedData: []
   };
   handleInputChange = event => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
-    //const { name, value } = event.target;
     this.setState({
       drinkSearch: event.target.value
     });
@@ -32,35 +25,26 @@ class Drinks extends Component {
 
   makeDrink = drinkData => {
     return {
-      name: drinkData.drinks.name,
-      ingredients: drinkData.drinks.ingredients,
-      instructions: drinkData.drinks.strInstructions,
-      glass: drinkData.drinks.strGlass,
-      image: drinkData.drinks.thumbnail
+      drink: drinkData.strDrink,
+      ingredient: drinkData.ingredients,
+      instructions: drinkData.strInstructions,
+      glass: drinkData.strGlass,
+      image: drinkData.strDrinkThumb,
+      id: drinkData.idDrink
     }
   };
 
+  searchDrink = query => {
+    API.getDrinksAPI(query)
+        .then(res => this.setState({ drinks: res.data.drinks.map(drinkData => this.makeDrink(drinkData)) }))
+        .catch(err => console.error(err));
+  };
 
   handleFormSubmit = event => {
     // When the form is submitted, prevent its default behavior, get drinks update the drinks state
     event.preventDefault();
-    API.getDrink2(this.state.drinkSearch)
-      .then(res =>{
-        console.log(res)
-        this.setState({ drinks: res.data.drinks })
-        this.setState({drinkID: res.data.drinks.idDrink})
-      })
-      .catch(err => console.log(err));
+    this.searchDrink(this.state.drinkSearch);
   };
-
-  loadDetails = event => {
-    event.preventDefault();
-    API.fullDetails(this.state.drinkID)
-      .then(res =>{
-        console.log(res)
-        this.setState({ingredients: res.data.strIngredient1})
-      })
-  }
 
   showIngredients = event => {
     event.preventDefault();
@@ -68,46 +52,15 @@ class Drinks extends Component {
       console.log(this.state)
       .then(res => {
         console.log(res)
-        this.setState({ ingredients: res.data.drinks})
+        this.setState({ ingredient: res.data.drinks})
       })
       .catch(err => console.log(err));
   }
 
-    // const api1 = (event) => {
-  //   event.preventDefault();
-  //   API.getDrinkAPI(this.state.drinkSearch)
-  //     .then(res => {
-  //       console.log(res)
-  //       this.setState({ 
-  //         drinks: res.data.drinks,
-  //         drinkID: res.data.drinks.idDrink
-  //        })
-  //     })
-  // };
-
-  // const api2 = (event) => {
-  //   event.preventDefault();
-  //   API.fullDetails(this.state.drinkID)
-  //     .then(res => {
-  //       console.log(res)
-  //       this.setState({
-  //         data2: res.data.drinks
-  //       })
-  //     })
-  // };
-
-  // handleApiCalls = () => {
-  //   !this.state.drinks ? api1() : console.log("There is data in data1");
-
-  //   !this.state.data2 ? api2() : console.log("There is data in data2")
-  //   console.log(data2);
-  // }
-  
   render() {
     return (
       <div>
           <Jumbotron />
-        <Nav />
       
         <Container>
           {/* Row that holds the search input */}
@@ -151,7 +104,7 @@ class Drinks extends Component {
                         key={drink.idDrink}
                         name={drink.strDrink}
                         id={drink.idDrink}
-                        thumbnail={drink.strDrinkThumb}
+                        image={drink.strDrinkThumb}
                         website_url={drink.website_url}
                         onClick={API.savedrink}
 

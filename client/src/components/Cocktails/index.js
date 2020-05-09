@@ -1,9 +1,9 @@
 import React from 'react';
 //import axios from 'axios';
- import "./style.css";
+import "./style.css";
 import {Table }from 'react-bootstrap';
 import API from "../../Utils/API";
-import { DrinkList, DrinkListItem } from "../DrinkList";
+import DrinkListItem  from "../DrinkList";
 // import Button from "../Button";
 
 export default class Cocktails extends React.Component {
