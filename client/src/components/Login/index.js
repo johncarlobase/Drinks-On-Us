@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactSignupLoginComponent from 'react-signup-login-component';
+import "./style.css";
  
 const LoginPage = (props) => {
     const signupWasClickedCallback = (data) => {
@@ -15,7 +16,7 @@ const LoginPage = (props) => {
       alert('Recover password callback, see log on the console to see the data.');
     };
     return (
-        <div>
+        <div className="login">
             <ReactSignupLoginComponent
                 title="Drinks Are On Us!"
                 handleSignup={signupWasClickedCallback}

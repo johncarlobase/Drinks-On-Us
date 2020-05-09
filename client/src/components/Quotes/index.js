@@ -1,6 +1,7 @@
 	import React from 'react';
   import data from '../Quotes/data.json';
   import { Container, Row, Col } from "../Grid";
+  import "./style.css";
   // import {Card }from 'react-bootstrap';
   const h1 ={
     textAlign: "center",
@@ -54,7 +55,7 @@
      
   
   
-  <div>
+  <div className="quotes">
   <Container>
         <Row> 
   <div classname="header">

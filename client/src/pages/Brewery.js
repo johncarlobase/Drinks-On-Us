@@ -8,6 +8,7 @@ import { BeerList, BeerListItem } from "../components/BeerList";
 import { Container, Row, Col } from "../components/Grid";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import "./style.css";
 
 
 class Brewery extends Component {
@@ -66,7 +67,7 @@ handleFormSubmit2 = event => {
 
   render() {
     return (
-      <div>
+      <div className="brewery">
  <Jumbotron />
 <Container>
       <Tabs>

@@ -9,6 +9,8 @@ import IBU from "../components/Beer/IBU.PNG"
 import SRM from "../components/Beer/SRM.png"
 import ABV from "../components/Beer/ABV.JPG"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./style.css";
+
 
 
 const cardStyle = {
