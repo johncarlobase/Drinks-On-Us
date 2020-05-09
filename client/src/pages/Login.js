@@ -8,7 +8,7 @@ function App() {
     <div className="App">
      <Jumbotron />     
      {/* <Nav /> */}
-     <h1>Do we need this Goddamn thing</h1>
+     <h1>Welcome to Drinks Are On Us!</h1>
      <LoginPage/>
 
     </div>

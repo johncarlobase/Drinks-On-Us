@@ -23,15 +23,15 @@ props,
         <Row>
           <Col size="sm-12">
 
-          <Accordion>
+<Accordion>
   <Card>
-    <Card.Header>
+     <Card.Header>
       <Accordion.Toggle as={Button} variant="link" eventKey="0">
-     <h3> {props.name}</h3>
+       <h3> {props.name}</h3>
       </Accordion.Toggle>
-    </Card.Header>
-    <Accordion.Collapse eventKey="0">
-      <Card.Body>
+     </Card.Header>
+       <Accordion.Collapse eventKey="0">
+        <Card.Body>
          <h5>Brewery Name: {props.name}</h5>
             <h6>Brewery Type: {props.brewery_type}</h6>
             <h6>Phone #: {props.phone}</h6>
@@ -43,8 +43,8 @@ props,
             <h6>Website:<a rel="noreferrer noopener" target="_blank" href={props.website_url}>
             {props.website_url}
             </a></h6>
-      </Card.Body>
-    </Accordion.Collapse>
+        </Card.Body>
+      </Accordion.Collapse>
   </Card>
  
 </Accordion>
