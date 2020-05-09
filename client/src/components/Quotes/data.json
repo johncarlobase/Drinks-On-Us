@@ -384,6 +384,24 @@
         "img" : "https://images.gr-assets.com/authors/1198682012p2/30808.jpg"
     },
     {
+      
+        "quoteText" :  "Give an Irishman lager for a month and he's a dead man. An Irishman's stomach is lined with copper, and the beer corrodes it. But whiskey polishes the copper and is the saving of him.",
+		"author":"Mark Twain",
+        "img" : "https://images.gr-assets.com/authors/1322103868p2/1244.jpg"
+    },
+    {
+      
+        "quoteText" : "I only take a drink on two occasions - when I'm thirsty and when I'm not..",
+		"author":"Brenden Behan",
+        "img" : "https://images.gr-assets.com/authors/1520799835p2/41348.jpg"
+    },
+    {
+      
+        "quoteText" : "Wine is constant proof that God loves us and likes to see us happy.",
+		"author":"Benjamin Franklin",
+        "img" : "https://images.gr-assets.com/authors/1215314094p2/289513.jpg"
+    },
+    {
        
         "quoteText":"24 hours in a day. 24 beers in a case. Coincidence? I think not.",
         "author":"H.L. Mencken",

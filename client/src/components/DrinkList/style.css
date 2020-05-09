@@ -1,7 +1,7 @@
 .card {
     margin-top: 5px;
-    width: 465px;
-    height: 360x;    box-shadow: 0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50);
+    /* width: 465px;
+    height: 360x;    box-shadow: 0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50); */
     padding-bottom: 0%;
     background-image: url(./white-marble-3-2018.jpg);
 }

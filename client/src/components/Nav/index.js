@@ -12,12 +12,23 @@ function Nav() {
           <Link
             to="/"
             className={
-			  window.location.pathname === "/" || window.location.pathname === "drinks" ? "nav-link active" : "nav-link"
+			  window.location.pathname === "/" || window.location.pathname === "about" ? "nav-link active" : "nav-link"
 			   }
           >
-          Drinks
+          Home
           </Link>
         </li>
+       
+        <li className="nav-item nav">
+          <Link
+            to="/drinkSearch"
+            className={window.location.pathname === "/drinkSearch" ? "nav-link active" : "nav-link"}
+          >
+           Drinks
+          </Link>
+        </li>
+
+
         <li className="nav-item nav">
           <Link
             to="/beer"
@@ -26,7 +37,7 @@ function Nav() {
            Beer
           </Link>
         </li>
-	
+
 		<li className="nav-item nav">
           <Link
             to="/brewery"
@@ -54,7 +65,7 @@ function Nav() {
        Quotes
           </Link>
         </li>
-		
+{/* 		
         
         <li className="nav-item nav">
           <Link
@@ -64,15 +75,8 @@ function Nav() {
            Login
           </Link>
         </li>
-        
-        <li className="nav-item nav">
-          <Link
-            to="/test"
-            className={window.location.pathname === "/test" ? "nav-link active" : "nav-link"}
-          >
-           Test
-          </Link>
-        </li>
+         */}
+       
       </ul>
     </div>
   </nav>
