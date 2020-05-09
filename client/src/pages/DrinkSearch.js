@@ -2,10 +2,11 @@ import React from 'react';
 import Jumbotron from "../components/Jumbotron"
 import Cocktails from "../components/Cocktails"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import "./style.css";
 //import { Container, Row, Col } from "../components/Grid";
 function App() {
   return (
-    <div className="App">
+    <div className="App-drinks">
      <Jumbotron />     
     <Tabs>
     <TabList>
