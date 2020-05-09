@@ -6,11 +6,10 @@ import {DrinkList} from "../DrinkList"
 import DrinkListItem  from "../DrinkListItem";
 import { Container, Row, Col } from "../Grid";
 
-export default class DrinkSearch extends React.Component {
+export default class IngredientSearch extends React.Component {
   state = {
     drinks: [],
-    drinkSearch: "",
-    ingredients: []
+    drinkSearch: ""
   };
 
   handleInputChange = event => {
@@ -31,7 +30,7 @@ export default class DrinkSearch extends React.Component {
   };
 
   searchDrink = query => {
-    API.getDrinksAPI(query)
+    API.getDrinksByIng(query)
         .then(res => this.setState({ drinks: res.data.drinks.map(drinkData => this.makeDrink(drinkData)) }))
         .catch(err => console.error(err));
   };
@@ -41,17 +40,6 @@ export default class DrinkSearch extends React.Component {
     event.preventDefault();
     this.searchDrink(this.state.drinkSearch);
   };
-
-  showIngredients = event => {
-    event.preventDefault();
-    API.ingredientList(this.state)
-      console.log(this.state)
-      .then(res => {
-        console.log(res)
-        this.setState({ ingredient: res.data.drinks})
-      })
-      .catch(err => console.log(err));
-  }
 
   render() {
     return (
@@ -63,13 +51,13 @@ export default class DrinkSearch extends React.Component {
               <form>
                 <Container>
                   <Row>
-                    <h1 className ="enter">Enter A Drink To Search For</h1>
+                    <h1 className ="enter">Enter An Ingredient To Search For Drinks</h1>
                     <Col size="xs-9 sm-10">
                       <Input
                         name="drinkSearch"
                         value={this.state.drinkSearch}
                         onChange={this.handleInputChange}
-                        placeholder="Search For a Drink"/>
+                        placeholder="Enter an Ingredient"/>
                     </Col>
                      {/* Row that holds the search input */}
                     <Col size="xs-3 sm-2">
@@ -95,7 +83,6 @@ export default class DrinkSearch extends React.Component {
                     console.log(drink);
                     return (
                       <DrinkListItem
-                        key={drink.idDrink}
                         strDrink={drink.drink}
                         idDrink={drink.id}
                         strDrinkThumb={drink.image}

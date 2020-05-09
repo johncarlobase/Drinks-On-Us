@@ -100,6 +100,10 @@ export default {
   },
 
   getDrinksAPI: function (query) {
+    return axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`);
+  },
+
+  getDrinksByIng: function (query) {
     return axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`);
   },
 
