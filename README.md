@@ -1,3 +1,5 @@
+PROJECT#3 MARKDOWN
+
 ## Drinks-On-Us
     A simple app to give you ideas on what you can drink for today. When you are tired of the ol' Rum and Coke. 
 
@@ -14,57 +16,41 @@ Stuck at home in Quarantine?  Make it a day of Quarandrinkin' with our app!
 ## Tech/framework used
 ![MERN](mern image)
 <b>Built with</b>
-- [Mongo]
-- [Express]
-- [React]
-- [Node]
-- [Visual Code]
-- [Heroku]
-- [mLabs]
-- [github]
+- [Mongo] (https://www.mongodb.com/)
+- [Robo3T] (https://www.robomongo.org/)
+- [Express] (https://www.npmjs.com/package/express)
+- [React] (https://reactjs.org/)
+- [Node] (https://nodejs.org/en/)
+- [Visual Code] (https://code.visualstudio.com/)
+- [Heroku] (https://www.heroku.com/home)
+- [mLabs] (https://mlab.com/)
+- [github] (https://github.com/)
+- [Cocktail DB] (https://www.thecocktaildb.com/)
 
 <b>Dependencies</b>
 - [Axios] (https://www.npmjs.com/package/axios)
 - [Concurrently] (https://www.npmjs.com/package/concurrently)
 - [E-mail Validator] (https://www.npmjs.com/package/email-validator)
-- [Express] ()
-- [Formik] ()
-- [mongoose] ()
-- [nodemon] ()
-- [yup] ()
-- [bootstrap] ()
+- [Express] (https://www.npmjs.com/package/express)
+- [Formik] (https://www.npmjs.com/package/formik)
+- [mongoose] (https://www.npmjs.com/package/mongoose)
+- [nodemon] (https://www.npmjs.com/package/nodemon)
+- [yup] (https://www.npmjs.com/package/yup)
+- [bootstrap] (https://www.npmjs.com/package/bootstrap)
+- [i] (https://www.npmjs.com/package/i)
 
 
 
 ## Features
-What makes your project stand out?
-
-## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
-## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+Search a drink by ingredient, search Random drinks, Search Beer, Brewery, maybe Wine too!
 
 ## API Reference
+-[Cocktail DB] (https://www.thecocktaildb.com/)
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-Describe and show how to run the tests with code examples.
-
-## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
-
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
-
-## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
+## Contributors
+- [Mike Nezzer] (https://github.com/mnezz1131)
+- [Evan Morisato] (https://github.com/evanmorisato)
+- [John Carlo Base] (https://github.com/johncarlobase)
 
 #### Anything else that seems useful
 
-## License
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © [Yourname]()

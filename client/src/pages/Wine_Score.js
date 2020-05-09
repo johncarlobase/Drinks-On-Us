@@ -8,6 +8,7 @@ import { Container, Row, Col } from "../components/Grid";
 import Input from "../components/Input";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import "./style.css";
  
 const h1 ={
   textAlign: "center",
@@ -70,7 +71,7 @@ class Wine_Score extends Component {
 
   render() {
     return (
-      <div>
+      <div className="winescore">
           <Jumbotron />
           <Container>
         <Tabs>

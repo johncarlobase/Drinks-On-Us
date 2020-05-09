@@ -3,6 +3,10 @@ import { Container, Row, Col } from "../Grid";
 // import "./style.css";
 import {Button, Accordion, Card }from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./style.css";
+
+// Exporting both RecipeList and RecipeListItem from this file
+
 
 
 

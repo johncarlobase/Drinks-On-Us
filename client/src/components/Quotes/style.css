@@ -6,3 +6,10 @@
 .header{
     text-align: center;
 }
+
+.quotes {
+    color: blanchedalmond;
+    background-color: black;
+    font-size: 30PX;
+    font-family: 'Kumar One', cursive;
+}

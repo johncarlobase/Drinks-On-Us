@@ -3,6 +3,7 @@ import Jumbotron from "../components/Jumbotron"
 import Cocktails from "../components/Cocktails"
 import { Container } from '../components/Grid';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import "./style.css";
 
 const center = {
   marginLeft: "-100"
@@ -11,7 +12,8 @@ const center = {
 
 function App() {
   return (
-    <div className="App" >
+    <div className="App-drinks" >
+
      <Jumbotron />     
  <Container style={center}>
     <Tabs>
