@@ -2,6 +2,10 @@
   import data from '../Quotes/data.json';
   import { Container, Row, Col } from "../Grid";
   // import {Card }from 'react-bootstrap';
+  const h1 ={
+    textAlign: "center",
+    fontFamily:  "'Kumar One', cursive",
+  }
   
   
   export default class QuoteList extends React.Component {
@@ -54,7 +58,7 @@
   <Container>
         <Row> 
   <div classname="header">
-  <h1 >Famous Quotes on Drinking and Alcohol</h1>
+  <h1 style ={h1}>Famous Quotes on Drinking and Alcohol</h1>
   </div>
   </Row>
        </Container>

@@ -9,6 +9,7 @@ import { Container, Row, Col } from "../components/Grid";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
+
 class Brewery extends Component {
   state = {
     beers: [],
@@ -66,8 +67,8 @@ handleFormSubmit2 = event => {
   render() {
     return (
       <div>
-    <Jumbotron />
-     {/* <Nav /> */}
+ <Jumbotron />
+<Container>
       <Tabs>
         <TabList>
           <Tab>General Search</Tab>
@@ -77,7 +78,7 @@ handleFormSubmit2 = event => {
         {/* This is tab panel 1 */}
             <TabPanel>  
               <Container>
-              {/* Row that holds the search input */}
+             {/* Row that holds the search input */}
               <Row className = "row">
                 <Col size="md-12">
                   <form>
@@ -106,13 +107,13 @@ handleFormSubmit2 = event => {
             </Col>
           </Row>
           {/* Row Ends that holds the search*/}
-          <Row>
-            <Col size="xs-12">
-              {this.state.beers.length ? (
+          <Row className ="breweries">
+              <Col size="xs-12">
+                {this.state.beers.length ? (
                   <BeerList>
-                  {this.state.beers.map(beer => {
-                    console.log(beer);
-                    return (
+                      {this.state.beers.map(beer => {
+                      console.log(beer);
+                      return (
                       <BeerListItem
                         key={beer.id}
                         name={beer.name}
@@ -254,29 +255,20 @@ handleFormSubmit2 = event => {
                         />
                         );
                       })}
-                </BeerList>
-              ) : (
-                <h4 className="text-center no-bee">No City Breweries to Display</h4>
-              )}
-            </Col>
-          </Row>
-        </Container>
-    </TabPanel>
- {/* End of tab panel 3 */}
+                    </BeerList>
+                    ) : (
+                      <h4 className="text-center no-bee">No City Breweries to Display</h4>
+                    )}
+                  </Col>
+                </Row>
+              </Container>
+            </TabPanel>
+        {/* End of tab panel 3 */}
 
     </Tabs>
         
-
-
-
-
-
-
-
-
-
-
-      </div>
+   </Container> 
+</div>
     );
   }
 }
