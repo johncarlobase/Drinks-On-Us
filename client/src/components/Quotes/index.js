@@ -1,11 +1,28 @@
 	import React from 'react';
   import data from '../Quotes/data.json';
   import { Container, Row, Col } from "../Grid";
-  import "./style.css";
-  // import {Card }from 'react-bootstrap';
+  import {Card }from 'react-bootstrap';
+   
+// /
   const h1 ={
     textAlign: "center",
-    fontFamily:  "'Kumar One', cursive",
+    fontFamily:  'Crimson',
+    fontSize: "35px",
+    marginTop: '5px'
+  }
+
+  const text = {
+    fontSize: "22px",
+    fontWeight: "600",
+    color: "#000"
+  }
+  const cardStyle = {
+    marginTop: "5px",
+    // width: "auto",
+     width: "1110px",
+    boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+    padding: "10px",
+  
   }
   
   
@@ -44,40 +61,44 @@
   return array;
 };
 
-
-
-
-
-
   
   render(){
     return(
-     
-  
-  
-  <div className="quotes">
+  <div>
   <Container>
         <Row> 
-  <div classname="header">
+        <Card className = "card" style ={cardStyle}>
+  <div className="header">
   <h1 style ={h1}>Famous Quotes on Drinking and Alcohol</h1>
   </div>
+  </Card>
   </Row>
+  <br></br>
        </Container>
       
   
     {data.map((postDetail, index)=>{
     return <ul>    
-      <Container>
+      
+    <Container>
+   
         <Row> 
+    
          <Col size="xs-1 sm-1">
            <img src ={postDetail.img} alt="whatevs"/> 
            </Col>
-           <Col size="xs-11 sm-11">
+         
+           <Col size="xs-11 sm-11" >
+           <div style={text}>
             {postDetail.quoteText}  -
             Author : {postDetail.author}
+            </div>
             </Col>
+           
          </Row>
+ 
        </Container>
+     
      
       </ul>
   

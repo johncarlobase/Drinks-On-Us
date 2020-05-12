@@ -9,7 +9,7 @@ import Quotes from "./pages/Quotes";
 import DrinkSearch from "./pages/DrinkSearch"
 import Wine_Score from "./pages/Wine_Score";
 import Wrapper from "./components/Wrapper";
-
+// import Valid from "./pages/Valid";
 
 function App() {
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import "./style.css";
 //import axios from 'axios';
 
 export default class WineList extends React.Component {
@@ -41,7 +40,7 @@ axios({
     return (
       <ul>
         { this.state.wines.map(wine =>
-<div className="wine">   
+<div>   
           <li>Wine: {wine.wine}</li>
           <li>Color: {wine.color}</li>
           <li>Country: {wine.country}</li>

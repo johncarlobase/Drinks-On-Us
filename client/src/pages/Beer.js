@@ -8,20 +8,24 @@ import abv1 from "../components/Beer/abv1.png"
 import IBU from "../components/Beer/IBU.PNG"
 import SRM from "../components/Beer/SRM.png"
 import ABV from "../components/Beer/ABV.JPG"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./style.css";
 
 
 
 const cardStyle = {
   marginTop: "5px",
-  // width: "auto",
-   width: "1200px",
+  width: "1110px",
   boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
   padding: "10px",
 
 }
-
+const picabv1 = {
+  width: "1060px",
+  objectFit: "cover"
+}
+const picABV = {
+  width: "1065px",
+  objectFit: "cover"
+}
 
 function App() {
   return (
@@ -41,7 +45,7 @@ function App() {
                           <Accordion.Collapse eventKey="0">
                            <Card.Body>     
                              <p>Fans of highly alcoholic beers are well aware of what ABV means—or at least that a beer with an ABV above 10% has the potential to leave you with a buzz before the first pint’s finished. Determined with an instrument called a hydrometer, ABV is an indicator of how strong a beer is. But more specifically, it’s the portion of the entire volume of liquid that’s actually alcohol.  </p>
-                            <img src={abv1} alt="ABV" width="1100px"></img> 
+                            <img style = {picabv1} src={abv1} alt="ABV" ></img> 
                           </Card.Body>
                           </Accordion.Collapse>
                         </Card>
@@ -103,7 +107,7 @@ function App() {
                            <Card.Body>
                               <p>When it comes to beer or other alcoholic beverages, gravity (referred to by brewers as specific gravity) has to do with the relative density of the wort at various stages of the fermentation process. OG refers to the specific gravity of the unfermented wort. FG—on the other hand—refers to the specific gravity of the fermented beer. In between OG and FG, some of the sugar in the wort is fermented into alcohol, while the remainder becomes part of the beer’s body (its taste).
                               Some trivia for you: FG is always lower than OG. Because sugars are converted into both alcohol and carbon dioxide during the fermentation process, the specific gravity reduces. Some sugar is gone, and then alcohol is naturally less dense than water.</p>
-                              <img src={ABV} alt="ABV" width="1100px"></img> 
+                              <img style = {picABV}src={ABV} alt="ABV" width="1100px"></img> 
                           </Card.Body>
                          </Accordion.Collapse>
                        </Card>

@@ -4,7 +4,7 @@ import "./style.css";
 
 
 function Wrapper(props){
-    return <div>{props.children}</div>
+    return <div className="wrapper2 animate"> {props.children}</div>
 }
 
 export default Wrapper;

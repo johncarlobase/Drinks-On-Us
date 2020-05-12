@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span>Drinks on Us!</span>
+      <span>Drinks on Us! 2020 ©  Team D ('Gangsta' John Carlo Base, Evan 'The Butcher'Morisato, Mike 'X' Nezzer)</span>
     </footer>
   );
 }

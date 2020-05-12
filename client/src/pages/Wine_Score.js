@@ -7,14 +7,32 @@ import { WineList, WineListItem } from "../components/WineList";
 import { Container, Row, Col } from "../components/Grid";
 import Input from "../components/Input";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Table from 'react-bootstrap/Table';
+import {Card, Accordion}from 'react-bootstrap';
 import 'react-tabs/style/react-tabs.css';
-import "./style.css";
- 
+
+let bg= require ('../Images/white-marble-3-2018.jpg')
+
 const h1 ={
   textAlign: "center",
-  fontFamily:  "'Kumar One', cursive",
 }
 
+const tabbs ={
+marginTop: "20px",
+boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+padding: "10px",
+backgroundImage: 'url('+bg+')',
+width: "1050px"
+}
+
+const cardStyle = {
+  marginTop: "5px",
+  // width: "auto",
+   width: "1050px",
+  boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+  padding: "10px",
+
+}
 
 
 class Wine_Score extends Component {
@@ -71,10 +89,68 @@ class Wine_Score extends Component {
 
   render() {
     return (
-      <div className="winescore">
+      <div>
           <Jumbotron />
-          <Container>
-        <Tabs>
+          
+          <Container >
+          <Row>  
+              <Col size="sm-12">
+                  <Accordion>
+                       <Card className = "card" style ={cardStyle}>
+                          <Card.Header>
+                               <Accordion.Toggle as={Button} variant="link" eventKey="0">    
+                                  <h5>What Are Wine Scores?</h5>
+                              </Accordion.Toggle>
+                          </Card.Header>
+                          <Accordion.Collapse eventKey="0">
+                           <Card.Body>     
+                             <p>A wine score is the quickest, simplest way for a wine critic to communicate their opinion about the quality of a wine. Often found alongside tasting notes, wine scores help consumers and collectors decide which wines to buy, and can be a powerful marketing tool. To generate a wine's average score, Wine-Searcher uses a Bayesian methodology to calculate a weighted average. This average score is calculated for specific vintages of a wine, as well as across all vintages. The 100-point scale is the most common method for scoring wines. </p>
+                             <p>The 100-point wine-scoring scale was popularized by Wine Spectator magazine and by Robert Parker in his Wine Advocate newsletter. The effect of a high score from either publication is hard to understate, and can make or break a wine brand (see these lists of Wine Spectator Top 100 Wines and Robert Parker 100-Point Wines).
+
+                              There are many who question the value of the 100-point scale, typically because almost all wines evaluated fall within a narrow band between 85 and 100 points. The system is based on the American high-school marking system, so the scale starts at 50 (rather than 0), which has led to further criticism. Despite this the 100-point scale is used by more and more critics – amateur and professional – with each year that passes.</p>
+                                  <Table variant="dark" >
+                                    <thead>
+                                      <tr>
+                                        <th>Score</th>
+                                        <th>Explanation</th>
+                                       </tr>
+                                    </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>95–100	Classic:</td>
+                                          <td>A  great wine</td>
+                                        </tr>
+                                        <tr>
+                                          <td>90–94	Outstanding:</td>
+                                          <td>A wine of superior character and style</td>
+                                        </tr>
+                                        <tr>
+                                          <td>85–89	Very good:</td>
+                                          <td>A wine with special qualities</td>
+                                        </tr>
+                                        <tr>
+                                          <td>80–84	Good:</td>
+                                          <td>A well-made wine</td>
+                                        </tr>
+                                        <tr>
+                                          <td>75–79	Mediocre:</td>
+                                          <td>A drinkable wine that may have minor flaws</td>
+                                        </tr>
+                                        <tr>
+                                          <td>50–74:</td>
+                                          <td>Not recommendedWine Spectator 100-Point Scale</td>
+                                        </tr>
+                                      </tbody>
+                                    </Table>
+                                            <p>Users of the 100-point scale include: Robert Parker (Wine Advocate), Wine Spectator, Vinous, Decanter Magazine, James Suckling, Jamie Goode, Jeff Leve (The Wine Cellar Insider), Wine & Spirits Magazine.  ~Wine Searcher.com</p>
+                                      {/* <img src={abv1} alt="ABV" width="1100px"></img>  */}
+                          </Card.Body>
+                          </Accordion.Collapse>
+                        </Card>
+                   </Accordion>
+                </Col>
+            </Row>  
+        <Tabs style ={tabbs} >
     <TabList>
       <Tab>Search by Color</Tab>
       <Tab>Search By Vintage</Tab>
@@ -82,17 +158,18 @@ class Wine_Score extends Component {
     </TabList>
  
     <TabPanel>
-    <Container>
+    <Container  >
           {/* Search for a color */}
           <Row className = "row">
             <Col size="md-12">
-              <form>
+              <form >
                 <Container>
                   <Row>
                     <h1 className ="enter" style={h1}>Enter A Wine To Search For - Red, White or Pink</h1>
                     <Col size="xs-9 sm-10">
                    
                       <Input
+                        
                         name="colorSearch"
                         value={this.state.colorSearch}     
                         onChange={this.handleInputChange}
