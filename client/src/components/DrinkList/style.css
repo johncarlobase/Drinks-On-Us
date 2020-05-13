@@ -1,11 +1,17 @@
 .card {
     margin-top: 5px;
-    /* width: 465px;
-    height: 360x;    box-shadow: 0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50); */
     padding-bottom: 0%;
     background-image: url(../../Images/marble2.jpg);
+    margin-bottom: 7px;
+} 
+.list-group{
+    margin-top: 15px;
+
 }
 
+.list{
+  margin-bottom: 55px;
+}
   .pic{
    width: 400px;
    height: 400px;

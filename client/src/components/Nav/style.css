@@ -3,12 +3,8 @@ nav.navbar {
   display: flex;
   justify-content: center;
   font-size: 60px;
-  
- 
-
-
+  margin-top: 25px;
 }
-
 
 .navbar-nav > li{
   padding-left:5px;
@@ -17,12 +13,12 @@ nav.navbar {
 
 .nav-link{
   font-family:  'Kumar One', cursive;
-color: aliceblue;
-text-shadow:
+  color: aliceblue;
+  text-shadow:
    -1px -1px 0 rgb(8, 8, 8),  
     1px -1px 0 #000,
     -1px 1px 0 rgb(236, 49, 49),
-     1px 1px 0 #000;
+    1px 1px 0 #000;
 }
 
 .nav-link.active{

@@ -9,10 +9,15 @@ import DrinkListItem from "../DrinkListItem";
 
 const contain = {
   margin: "auto",
-   width: "1270px",
+  width: "1270px",
   boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
   padding: "10px",
+}
 
+const h4 = {
+  padding: "5px",
+fontWeight: "500",
+  fontFamily: "Crimson",
 }
 
 export default class Cocktails extends React.Component {
@@ -75,8 +80,6 @@ export default class Cocktails extends React.Component {
 {/* ************************************************************************************************************************************************************************ */}
    
     {this.state.filters.length ? (
-             
-             
              <DrinkList>
                   {this.state.filters.map(filter => {
                     console.log(filter);
@@ -90,7 +93,7 @@ export default class Cocktails extends React.Component {
                       })}
                 </DrinkList>
               ) : (
-                <h4 className="text-center">No Drinks to Display</h4>
+                <h2 style = {h4} className="text-center">No Drinks to Display</h2>
               )}
             
 {/* ************************************************************************************************************************************************************************ *

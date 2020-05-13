@@ -15,8 +15,25 @@ let bg= require ('../Images/white-marble-3-2018.jpg')
 
 const h1 ={
   textAlign: "center",
+  fontFamily: "Crimson",
+  fontWeight: "550",
+  fontSize: "55px",
+  
 }
 
+const h2 ={
+  textAlign: "center",
+  fontFamily: "Crimson",
+  fontWeight: "550",
+  fontSize: "45px"
+}
+
+
+const h4 = {
+  padding: "5px",
+fontWeight: "550",
+  fontFamily: "Crimson",
+}
 const tabbs ={
 marginTop: "20px",
 boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
@@ -31,10 +48,7 @@ const cardStyle = {
    width: "1050px",
   boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
   padding: "10px",
-
 }
-
-
 class Wine_Score extends Component {
   state = {
     colors: [],
@@ -44,6 +58,7 @@ class Wine_Score extends Component {
     countrys: [],
     countrysearch: ""
   };
+
   handleInputChange = event => {
     // Destructure the name and value properties off of event.target   // Update the appropriate state     //const { name, value } = event.target;
     this.setState({
@@ -52,6 +67,7 @@ class Wine_Score extends Component {
       countrySearch: event.target.value,
     });
   };
+
   handleFormSubmit = event => {
     // When the form is submitted, prevent its default behavior, get beers update the beers state
     event.preventDefault();
@@ -62,6 +78,7 @@ class Wine_Score extends Component {
       })
       .catch(err => console.log(err));
   };
+
   handleFormSubmit1 = event => {
     // When the form is submitted, prevent its default behavior, get beers update the beers state
     event.preventDefault();
@@ -90,19 +107,18 @@ class Wine_Score extends Component {
   render() {
     return (
       <div>
-          <Jumbotron />
-          
-          <Container >
+          <Jumbotron />       
+          <Container>
           <Row>  
               <Col size="sm-12">
                   <Accordion>
                        <Card className = "card" style ={cardStyle}>
                           <Card.Header>
                                <Accordion.Toggle as={Button} variant="link" eventKey="0">    
-                                  <h5>What Are Wine Scores?</h5>
+                                  <h1 style={h1}>What Are Wine Scores?</h1>
                               </Accordion.Toggle>
                           </Card.Header>
-                          <Accordion.Collapse eventKey="0">
+                               <Accordion.Collapse eventKey="0">
                            <Card.Body>     
                              <p>A wine score is the quickest, simplest way for a wine critic to communicate their opinion about the quality of a wine. Often found alongside tasting notes, wine scores help consumers and collectors decide which wines to buy, and can be a powerful marketing tool. To generate a wine's average score, Wine-Searcher uses a Bayesian methodology to calculate a weighted average. This average score is calculated for specific vintages of a wine, as well as across all vintages. The 100-point scale is the most common method for scoring wines. </p>
                              <p>The 100-point wine-scoring scale was popularized by Wine Spectator magazine and by Robert Parker in his Wine Advocate newsletter. The effect of a high score from either publication is hard to understate, and can make or break a wine brand (see these lists of Wine Spectator Top 100 Wines and Robert Parker 100-Point Wines).
@@ -111,7 +127,7 @@ class Wine_Score extends Component {
                                   <Table variant="dark" >
                                     <thead>
                                       <tr>
-                                        <th>Score</th>
+                                        <th>Scores</th>
                                         <th>Explanation</th>
                                        </tr>
                                     </thead>
@@ -165,11 +181,10 @@ class Wine_Score extends Component {
               <form >
                 <Container>
                   <Row>
-                    <h1 className ="enter" style={h1}>Enter A Wine To Search For - Red, White or Pink</h1>
+                    <h2 className ="enter" style={h2}>Enter A Wine To Search For - Red, White or Pink</h2>
                     <Col size="xs-9 sm-10">
                    
                       <Input
-                        
                         name="colorSearch"
                         value={this.state.colorSearch}     
                         onChange={this.handleInputChange}
@@ -216,7 +231,7 @@ class Wine_Score extends Component {
                       })}
                 </WineList>
               ) : (
-                <h4 className="text-center no-bee">No Wines to Display</h4>
+                <h2 style ={h4} className="text-center no-bee">No Wines to Display</h2>
               )}
             </Col>
           </Row>
@@ -232,7 +247,7 @@ class Wine_Score extends Component {
               <form>
                 <Container>
                   <Row>
-                    <h1 className ="enter">Enter A Vintage To Search For</h1>
+                    <h1 style={h2} className ="enter">Enter A Vintage To Search For</h1>
                     <Col size="xs-9 sm-10">
                    
                       <Input
@@ -282,7 +297,7 @@ class Wine_Score extends Component {
                       })}
                 </WineList>
               ) : (
-                <h4 className="text-center no-bee">No Wines to Display</h4>
+                <h2 style ={h4} className="text-center no-bee">No Wines to Display</h2>
               )}
             </Col>
           </Row>
@@ -299,7 +314,7 @@ class Wine_Score extends Component {
                 <Container>
                   <Row>
                  
-                    <h1 className ="enter">Enter A Country To Search For</h1>
+                    <h1 style={h2} className ="enter">Enter A Country To Search For</h1>
                     <Col size="xs-9 sm-10">
                    
                       <Input
@@ -349,7 +364,7 @@ class Wine_Score extends Component {
                       })}
                 </WineList>
               ) : (
-                <h4 className="text-center no-bee">No Wines to Display</h4>
+                <h2 style ={h4} className="text-center no-bee">No Wines to Display</h2>
               )}
             </Col>
           </Row>
