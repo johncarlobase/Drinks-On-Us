@@ -1,6 +1,8 @@
 import React from 'react';
 import Jumbotron from "../components/Jumbotron"
 import Cocktails from "../components/Cocktails"
+import DrinkSearch from "../components/DrinkSearch"
+import IngredientSearch from "../components/IngredientSearch"
 // import { Container } from '../components/Grid';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -26,18 +28,18 @@ function App() {
     <TabList>
           <Tab>Drinks By Category</Tab>
           <Tab>Search By Ingredient</Tab>
-          <Tab>Search By Whatevs</Tab>
+          <Tab>Search By Drink Name</Tab>
         </TabList>
     <TabPanel>
      <Cocktails />
      </TabPanel>
 
      <TabPanel>
-     <h1>Put some shit here</h1>
+     <IngredientSearch/>
      </TabPanel>
 
      <TabPanel>
-     <h1>Put some more shit here</h1>
+     <DrinkSearch/>
      </TabPanel>
 
      </Tabs>

@@ -99,6 +99,47 @@ export default {
 
   },
 
+  getDrinksAPI: function (query) {
+    return axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`);
+  },
+
+  getDrinksByIng: function (query) {
+    return axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`);
+  },
+
+  ingredientList: function () {
+    return axios.get("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list")
+  },
+
+  fullDetails: function(drinkID) {
+    return axios({
+      "method":"GET",
+      "url":"https://the-cocktail-db.p.rapidapi.com/lookup.php",
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"the-cocktail-db.p.rapidapi.com",
+      "x-rapidapi-key":"c22e73525cmshd4b903fea7d9db9p1297efjsn1aadaafbd701"
+      },"params":{
+      "i": drinkID
+      }
+      }).then((response)=>{
+        console.log(response)
+      })
+  },
+
+  ingredientList2: function(filterSearch) {
+    return axios({
+      "method":"GET",
+      "url":"https://the-cocktail-db.p.rapidapi.com/list.php",
+      "headers":{
+      "content-type":"application/octet-stream",
+      "x-rapidapi-host":"the-cocktail-db.p.rapidapi.com",
+      "x-rapidapi-key":"c22e73525cmshd4b903fea7d9db9p1297efjsn1aadaafbd701"
+      },"params":{
+      "i":filterSearch
+      }
+      })
+  },
  getDrinkFilter: function (filterSearch) {
   return axios({
     "method":"GET",
@@ -151,14 +192,18 @@ getDrinkId: function (idSearch) {
   updateDrink: function (id, drinkData) {
     return axios.put("/api/drinks/" + id, drinkData);
   },
-  // Deletes the drink with the given id
-  deleteDrink: function (id) {
-    return axios.delete("/api/drinks/" + id);
+   // Deletes the drink with the given id
+   deleteDrink: function (id) {
+    return axios.delete("/api/drinks/" + id).then(result => result.data);
   },
   // Saves a drink to the database
   saveDrink: function (drinkData) {
-    return axios.post("/api/drinks", drinkData);
+    return axios.post("api/drinks", drinkData).then(result => result.data);
   },
+  // Get the saved drinks from the database
+  savedDrinks: function () {
+    return axios.get("/api/drinks").then(result => result.data);
+  }
 
 
 
