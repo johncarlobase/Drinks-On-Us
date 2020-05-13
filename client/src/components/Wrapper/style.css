@@ -2,7 +2,7 @@
   min-height: 100%;
   padding-bottom: 100px;
 }
-.wrapper2 {
+/* .wrapper2 {
   height: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -27,4 +27,4 @@
    100%{
     background-position:0px -1000px;
   }
-}
+} */

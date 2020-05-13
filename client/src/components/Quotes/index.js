@@ -7,8 +7,9 @@
   const h1 ={
     textAlign: "center",
     fontFamily:  'Crimson',
-    fontSize: "35px",
-    marginTop: '5px'
+    fontSize: "55px",
+    marginTop: '5px',
+    fontWeight: "500"
   }
 
   const text = {
@@ -22,7 +23,6 @@
      width: "1110px",
     boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
     padding: "10px",
-  
   }
   
   
@@ -65,25 +65,23 @@
   render(){
     return(
   <div>
-  <Container>
-        <Row> 
-        <Card className = "card" style ={cardStyle}>
-  <div className="header">
-  <h1 style ={h1}>Famous Quotes on Drinking and Alcohol</h1>
-  </div>
-  </Card>
-  </Row>
-  <br></br>
-       </Container>
-      
+            <Container>
+               <Row> 
+                <Card className = "card" style ={cardStyle}>
+                    <div className="header">
+                       <h1 style ={h1}>Famous Quotes on Drinking and Alcohol</h1>
+                    </div>
+                </Card>
+              </Row>
+                 <br></br>
+             </Container>
+                
   
     {data.map((postDetail, index)=>{
     return <ul>    
       
     <Container>
-   
         <Row> 
-    
          <Col size="xs-1 sm-1">
            <img src ={postDetail.img} alt="whatevs"/> 
            </Col>

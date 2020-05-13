@@ -17,7 +17,18 @@ const tabbs ={
   backgroundImage: 'url('+bg+')',
   width: "1050px"
   }
-
+  const h1 ={
+    textAlign: "center",
+    fontFamily: "Crimson",
+    fontWeight: "550",
+    fontSize: "50px",
+    
+  }
+  const h4 = {
+    padding: "5px",
+  fontWeight: "550",
+    fontFamily: "Crimson",
+  }
 
 // This is my new gitpush
 class Brewery extends Component {
@@ -94,7 +105,7 @@ handleFormSubmit2 = event => {
                   <form>
                    <Container>
                       <Row>
-                      <h1 className ="enter">Enter A Brewery To Search For</h1>
+                      <h1 style ={h1} >Enter A Brewery To Search For</h1>
                       <Col size="xs-9 sm-10">
                       <Input
                         name="beerSearch"
@@ -141,7 +152,7 @@ handleFormSubmit2 = event => {
                       })}
                 </BeerList>
               ) : (
-                <h4 className="text-center no-bee">No Breweries to Display</h4>
+                <h3 style = {h4} className="text-center no-bee">No Breweries to Display</h3>
               )}
             </Col>
           </Row>
@@ -157,7 +168,7 @@ handleFormSubmit2 = event => {
                   <form>
                    <Container>
                       <Row>
-                      <h1 className ="enter">Enter A City To Search For A Brewery List</h1>
+                      <h2 style ={h1} className ="enter">Enter A City To Search For A Brewery List</h2>
                       <Col size="xs-9 sm-10">
                       <Input
                         name="beerCity"
@@ -204,7 +215,7 @@ handleFormSubmit2 = event => {
                       })}
                 </BeerList>
               ) : (
-                <h4 className="text-center no-bee">No City Breweries to Display</h4>
+                <h3 style = {h4} className="text-center no-bee">No City Breweries to Display</h3>
               )}
             </Col>
           </Row>
@@ -220,7 +231,7 @@ handleFormSubmit2 = event => {
                   <form>
                    <Container>
                       <Row>
-                      <h1 className ="enter">Enter A State To Search For A Brewery List</h1>
+                      <h3 style ={h1} className ="enter">Enter A State To Search For A Brewery List</h3>
                       <Col size="xs-9 sm-10">
                       <Input
                         name="beerState"
@@ -267,7 +278,7 @@ handleFormSubmit2 = event => {
                       })}
                     </BeerList>
                     ) : (
-                      <h4 className="text-center no-bee">No City Breweries to Display</h4>
+                      <h3 style = {h4} className="text-center no-bee">No State Breweries to Display</h3>
                     )}
                   </Col>
                 </Row>
