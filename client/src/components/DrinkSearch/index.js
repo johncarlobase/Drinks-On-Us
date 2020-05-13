@@ -3,7 +3,7 @@ import Input from "../Input";
 import Button from "../Button";
 import API from "../../Utils/API";
 import {DrinkList} from "../DrinkList"
-import DrinkListItem  from "../DrinkListItem";
+import Results from "../Results"
 import { Container, Row, Col } from "../Grid";
 
 export default class DrinkSearch extends React.Component {
@@ -26,7 +26,9 @@ export default class DrinkSearch extends React.Component {
       instructions: drinkData.strInstructions,
       glass: drinkData.strGlass,
       image: drinkData.strDrinkThumb,
-      id: drinkData.idDrink
+      id: drinkData.idDrink,
+      alcoholic: drinkData.strAlcoholic,
+      category: drinkData.strCategory
     }
   };
 
@@ -87,7 +89,7 @@ export default class DrinkSearch extends React.Component {
             </Col>
           </Row>
           {/* Row Ends that holds the search*/}
-          <Row>
+          {/* <Row>
             <Col size="xs-12">
               {this.state.drinks.length ? (
                 <DrinkList> 
@@ -107,8 +109,27 @@ export default class DrinkSearch extends React.Component {
                 <h4 className="text-center no-bee">No Drinks to Display</h4>
               )}
             </Col>
-          </Row>
+          </Row> */}
         </Container>
+        
+        {this.state.drinks.length ? (
+                  <DrinkList>
+                  {this.state.drinks.map(drink => {
+                    console.log(drink);
+                    return (
+                      <Results
+                        drinks={drink}
+                        strDrink={drink.drink}
+                        idDrink={drink.id}
+                        strDrinkThumb={drink.image}
+                        />
+                        );
+                      })}
+                </DrinkList>
+              ) : (
+                <h4 className="text-center">No Drinks to Display</h4>
+              )}
+
       </div>
     );
   }
