@@ -74,7 +74,7 @@ export default class Cocktails extends React.Component {
           >{drink.strCategory}</button></th> 
       </tr>
       </thead>
-     </Table>
+  </Table>
 
 
    </div>)}

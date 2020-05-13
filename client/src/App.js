@@ -9,6 +9,7 @@ import Quotes from "./pages/Quotes";
 import DrinkSearch from "./pages/DrinkSearch"
 import Wine_Score from "./pages/Wine_Score";
 import Wrapper from "./components/Wrapper";
+import Saved from "./pages/Saved";
 
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
      	      <Route exact path="/brewery" component={Brewery} />
 			  <Route exact path="/quotes" component={Quotes} />
 			  <Route exact path="/wine_score" component={Wine_Score} />
-			  <Route exact path="/drinkSearch" component={DrinkSearch} /> 
+			  <Route exact path="/drinkSearch" component={DrinkSearch} />
+			  <Route exact path="/saved" component={Saved} /> 
         </Wrapper>
      
       </div>

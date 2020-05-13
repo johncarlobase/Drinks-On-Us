@@ -3,13 +3,15 @@ import Input from "../Input";
 import Button from "../Button";
 import API from "../../Utils/API";
 import {DrinkList} from "../DrinkList"
-import DrinkListItem  from "../DrinkListItem";
+import Results from "../Results"
+//import DrinkListItem  from "../DrinkListItem";
 import { Container, Row, Col } from "../Grid";
 
 export default class IngredientSearch extends React.Component {
   state = {
     drinks: [],
-    drinkSearch: ""
+    drinkSearch: "",
+    ingredients: []
   };
 
   handleInputChange = event => {
@@ -30,7 +32,7 @@ export default class IngredientSearch extends React.Component {
   };
 
   searchDrink = query => {
-    API.getDrinksByIng(query)
+    API.getDrinksAPI(query)
         .then(res => this.setState({ drinks: res.data.drinks.map(drinkData => this.makeDrink(drinkData)) }))
         .catch(err => console.error(err));
   };
@@ -40,6 +42,17 @@ export default class IngredientSearch extends React.Component {
     event.preventDefault();
     this.searchDrink(this.state.drinkSearch);
   };
+
+  showIngredients = event => {
+    event.preventDefault();
+    API.ingredientList(this.state)
+      console.log(this.state)
+      .then(res => {
+        console.log(res)
+        this.setState({ ingredient: res.data.drinks})
+      })
+      .catch(err => console.log(err));
+  }
 
   render() {
     return (
@@ -51,13 +64,13 @@ export default class IngredientSearch extends React.Component {
               <form>
                 <Container>
                   <Row>
-                    <h1 className ="enter">Enter An Ingredient To Search For Drinks</h1>
+                    <h1 className ="enter">Enter An Ingredient To Search For A Drink</h1>
                     <Col size="xs-9 sm-10">
                       <Input
                         name="drinkSearch"
                         value={this.state.drinkSearch}
                         onChange={this.handleInputChange}
-                        placeholder="Enter an Ingredient"/>
+                        placeholder="Search For a Drink"/>
                     </Col>
                      {/* Row that holds the search input */}
                     <Col size="xs-3 sm-2">
@@ -75,17 +88,15 @@ export default class IngredientSearch extends React.Component {
             </Col>
           </Row>
           {/* Row Ends that holds the search*/}
-          <Row>
+          {/* <Row>
             <Col size="xs-12">
               {this.state.drinks.length ? (
                 <DrinkList> 
                   {this.state.drinks.map(drink => {
                     console.log(drink);
                     return (
-                      <DrinkListItem
-                        strDrink={drink.drink}
-                        idDrink={drink.id}
-                        strDrinkThumb={drink.image}
+                      <Results
+                        drinks={this.state.drinks}
                         />
                         );
                       })}
@@ -94,8 +105,28 @@ export default class IngredientSearch extends React.Component {
                 <h4 className="text-center no-bee">No Drinks to Display</h4>
               )}
             </Col>
-          </Row>
+          </Row> */}
         </Container>
+
+        {this.state.drinks.length ? (
+                  <DrinkList>
+                  {this.state.drinks.map(drink => {
+                    console.log(drink);
+                    return (
+                      <Results
+                        drinks={drink}
+                        strDrink={drink.drink}
+                        idDrink={drink.id}
+                        strDrinkThumb={drink.image}
+                        />
+                        );
+                      })}
+                </DrinkList>
+              ) : (
+                <h4 className="text-center">No Drinks to Display</h4>
+              )}
+
+
       </div>
     );
   }

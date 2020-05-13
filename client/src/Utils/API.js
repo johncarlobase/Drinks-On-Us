@@ -107,6 +107,10 @@ export default {
     return axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`);
   },
 
+  ingredientList: function () {
+    return axios.get("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list")
+  },
+
   fullDetails: function(drinkID) {
     return axios({
       "method":"GET",
@@ -123,7 +127,7 @@ export default {
       })
   },
 
-  ingredientList: function() {
+  ingredientList2: function(filterSearch) {
     return axios({
       "method":"GET",
       "url":"https://the-cocktail-db.p.rapidapi.com/list.php",
@@ -132,7 +136,7 @@ export default {
       "x-rapidapi-host":"the-cocktail-db.p.rapidapi.com",
       "x-rapidapi-key":"c22e73525cmshd4b903fea7d9db9p1297efjsn1aadaafbd701"
       },"params":{
-      "i":"list"
+      "i":filterSearch
       }
       })
   },
