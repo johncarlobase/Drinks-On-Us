@@ -5,10 +5,13 @@ import {Card, Accordion, Button }from 'react-bootstrap';
 // import Details from "../Details"
 import API from "../../Utils/API"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./style.css";
+let bg= require ('../../Images/marble2.jpg')
+const list ={
+  width: "535px",
+  margin: "auto",
+  backgroundColor: "#b8b5ba"
+}
 
-
-let bg= require ('../DrinkList/white-marble-3-2018.jpg')
 const cardStyle = {
   marginTop: "5px",
   width: "465px",
@@ -42,7 +45,7 @@ class DrinkListItem extends Component {
 
     render() {  
       return (
-        <li className="list-group-item list">
+        <li className="list-group-item list" style={list}>
     <Container>
        <Row>
          <Col size="sm-12">     
@@ -73,11 +76,11 @@ class DrinkListItem extends Component {
                    <li>Ingredient8 : {detail.strIngredient8}  -  {detail.strMeasure8}</li>
                    <li>Ingredient9 : {detail.strIngredient9}  -  {detail.strMeasure9}</li>
                    <li>Ingredient10 : {detail.strIngredient10} -  {detail.strMeasure10}</li>
-                   <li>Ingredient11 : {detail.strIngredient11}  - {detail.strMeasure11}</li>
+                   {/* <li>Ingredient11 : {detail.strIngredient11}  - {detail.strMeasure11}</li>
                    <li>Ingredient12 : {detail.strIngredient12}  - {detail.strMeasure12}</li>
                    <li>Ingredient13 : {detail.strIngredient13}  - {detail.strMeasure13}</li>
                    <li>Ingredient14 : {detail.strIngredient14}  - {detail.strMeasure14}</li>
-                   <li>Ingredient15 : {detail.strIngredient15}  - {detail.strMeasure15}</li>
+                   <li>Ingredient15 : {detail.strIngredient15}  - {detail.strMeasure15}</li> */}
                   </div>
                 )}
               </Card.Body>

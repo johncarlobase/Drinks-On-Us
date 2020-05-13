@@ -1,11 +1,10 @@
-.jumbotron{
+
+
+  .jumbotron{
   background-image: url(wall.jpg);
-  border-bottom: rgb(114, 122, 122);
-  border-bottom-style: groove;
-  border-bottom-width: 18px;
 
 }
-  .wrapper {
+  .wrapper1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,5 +45,3 @@
     .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b,
     .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
   }
-
-

@@ -1,7 +1,7 @@
 import React from 'react';
 //import axios from 'axios';
  import "./style.css";
-import {Table }from 'react-bootstrap';
+// import {Card }from 'react-bootstrap';
 import API from "../../Utils/API";
 import { DrinkList} from "../DrinkList";
 import DrinkListItem from "../DrinkListItem";
@@ -9,7 +9,7 @@ import DrinkListItem from "../DrinkListItem";
 
 const contain = {
   margin: "auto",
-   width: "1400px",
+   width: "1270px",
   boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
   padding: "10px",
 
@@ -62,24 +62,22 @@ export default class Cocktails extends React.Component {
         { this.state.drinks.map(drink =>
      
         <div className="block " key={drink.strCategory} >   
-           <Table striped bordered hover responsive size="sm"   >
-              <thead className='table'>
-                <tr>
-                <th>
+        
                   <button
                     key={drink.strCategory}
                     onClick={this.handleClick}
                     id={drink.strCategory}
                     value={drink.strCategory}
-                   >{drink.strCategory}</button></th> 
-                  </tr>
-                </thead>
-           </Table>
+                   >{drink.strCategory}</button>
+        
         </div>)}
         
 {/* ************************************************************************************************************************************************************************ */}
+   
     {this.state.filters.length ? (
-                  <DrinkList>
+             
+             
+             <DrinkList>
                   {this.state.filters.map(filter => {
                     console.log(filter);
                     return (
@@ -94,6 +92,7 @@ export default class Cocktails extends React.Component {
               ) : (
                 <h4 className="text-center">No Drinks to Display</h4>
               )}
+            
 {/* ************************************************************************************************************************************************************************ *
 
 {/* Ending Div  */}

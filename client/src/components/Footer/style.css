@@ -1,7 +1,11 @@
 .footer {
-  min-height: 100px;
+  min-height: 15px;
   background: #E5E5E5;
   position: relative;
+  text-align: center;
+font-weight: 600;
+
+
 }
 
 .footer span {

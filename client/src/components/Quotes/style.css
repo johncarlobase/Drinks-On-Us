@@ -1,15 +1,3 @@
-.h1{
-    text-align: center;
-    font-family:  'Kumar One', cursive;
-}
-
-.header{
-    text-align: center;
-}
-
-.quotes {
-    color: blanchedalmond;
-    background-color: black;
-    font-size: 30PX;
-    font-family: 'Kumar One', cursive;
+.col-xs-11.col-sm-11{
+    font-size: 35px;
 }

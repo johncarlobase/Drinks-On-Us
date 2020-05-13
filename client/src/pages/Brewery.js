@@ -8,7 +8,16 @@ import { BeerList, BeerListItem } from "../components/BeerList";
 import { Container, Row, Col } from "../components/Grid";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import "./style.css";
+let bg= require ('../Images/white-marble-3-2018.jpg')
+
+const tabbs ={
+  marginTop: "10px",
+  boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+  padding: "10px",
+  backgroundImage: 'url('+bg+')',
+  width: "1050px"
+  }
+
 
 // This is my new gitpush
 class Brewery extends Component {
@@ -67,10 +76,10 @@ handleFormSubmit2 = event => {
 
   render() {
     return (
-      <div className="brewery">
+      <div>
  <Jumbotron />
 <Container>
-      <Tabs>
+      <Tabs style={tabbs}>
         <TabList>
           <Tab>General Search</Tab>
           <Tab>City Brewery Search</Tab>

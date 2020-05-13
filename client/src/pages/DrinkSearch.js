@@ -1,22 +1,28 @@
 import React from 'react';
 import Jumbotron from "../components/Jumbotron"
 import Cocktails from "../components/Cocktails"
-import { Container } from '../components/Grid';
+// import { Container } from '../components/Grid';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import "./style.css";
 
-const center = {
-  marginLeft: "-100"
+let bg= require ('../Images/marble2.jpg')
 
-}
 
+const tabbs ={
+  marginTop: "40px",
+  boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+  padding: "10px",
+  backgroundImage: 'url('+bg+')',
+  width: "1300px",
+  margin: "auto",
+  }
 function App() {
   return (
-    <div className="App-drinks" >
-
+    <div className="App" >
+ 
      <Jumbotron />     
- <Container style={center}>
-    <Tabs>
+ <div className = "wtf">
+ {/* <Container> */}
+    <Tabs style = {tabbs}>
     <TabList>
           <Tab>Drinks By Category</Tab>
           <Tab>Search By Ingredient</Tab>
@@ -35,7 +41,8 @@ function App() {
      </TabPanel>
 
      </Tabs>
-     </Container>
+     {/* </Container> */}
+     </div>
     </div>
   );
 }
