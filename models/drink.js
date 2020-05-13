@@ -10,7 +10,9 @@ const drinkSchema = new Schema({
 	glass: { type: String},
 	image: { type: String},
 	date: { type: Date },
-	id: { type: Number }
+	id: { type: Number },
+	alcoholic: { type: String},
+	category: {type: String}
 });
 
 //Setting schema to variable

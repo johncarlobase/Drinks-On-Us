@@ -27,7 +27,9 @@ export default class IngredientSearch extends React.Component {
       instructions: drinkData.strInstructions,
       glass: drinkData.strGlass,
       image: drinkData.strDrinkThumb,
-      id: drinkData.idDrink
+      id: drinkData.idDrink,
+      alcoholic: drinkData.strAlcoholic,
+      category: drinkData.strCategory
     }
   };
 
