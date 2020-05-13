@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import Nav from "../Nav";
-// import BorderPage from "../BorderPage"
+// import { Container } from "../Grid";
 
 function Jumbotron(props) {
   return (
@@ -15,10 +15,10 @@ function Jumbotron(props) {
          </div>
         </div>
       </div>
-     {/* <BorderPage/> */}
+     
      {/* <Container> */}
       <div className = " navBar">  
-         <Nav />
+       
       </div>
       {/* </Container> */}
 

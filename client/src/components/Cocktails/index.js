@@ -1,11 +1,19 @@
 import React from 'react';
 //import axios from 'axios';
-import "./style.css";
-import {Table }from 'react-bootstrap';
+ import "./style.css";
+// import {Card }from 'react-bootstrap';
 import API from "../../Utils/API";
 import { DrinkList} from "../DrinkList";
 import DrinkListItem from "../DrinkListItem";
 // import Button from "../Button";
+
+const contain = {
+  margin: "auto",
+   width: "1270px",
+  boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+  padding: "10px",
+
+}
 
 export default class Cocktails extends React.Component {
  componentDidMount() {    
@@ -31,60 +39,45 @@ export default class Cocktails extends React.Component {
         })
     };  
  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-  state = {
-    drinks: [],
-    filters: [],
-    filterSearch:"strCategory",
-    selectedDrink:""
-  }
- 
-  // selectDrink = id => {
-  //   this.setState({selectedDrink: id})
-  //   console.log("select drunk is " + id)
-  // }
-
+     state = {
+        drinks: [],
+        filters: [],
+        filterSearch:"strCategory",
+        selectedDrink:""
+        }
 
     handleClick = (event) => {
-    // When the form is submitted, prevent its default behavior, get beers update the beers state
-    event.preventDefault();
-    API.getDrinkFilter(event.target.value)
-      .then(response =>{
-        console.log(response)
-        this.setState({ filters: response.data.drinks })  
-      })
-      .catch(err => console.log(err));
-    };
+        event.preventDefault();
+        API.getDrinkFilter(event.target.value)
+          .then(response =>{
+          console.log(response)
+          this.setState({ filters: response.data.drinks })  
+          })
+          .catch(err => console.log(err));
+        };
 
   render() {
-    //  console.log(API.getDrinkFilter(filterSearch))
     return (
-<div key> 
+    <div style={contain}> 
         { this.state.drinks.map(drink =>
      
-   <div className="block " key={drink.strCategory}>   
-  <Table striped bordered hover responsive size="sm">
-      <thead className='table'>
-       <tr>
-         <th>
-         <button
-           key={drink.strCategory}
-           onClick={this.handleClick}
-            id={drink.strCategory}
-           value={drink.strCategory}
-          >{drink.strCategory}</button></th> 
-      </tr>
-      </thead>
-  </Table>
-
-
-   </div>)}
+        <div className="block " key={drink.strCategory} >   
+        
+                  <button
+                    key={drink.strCategory}
+                    onClick={this.handleClick}
+                    id={drink.strCategory}
+                    value={drink.strCategory}
+                   >{drink.strCategory}</button>
+        
+        </div>)}
         
 {/* ************************************************************************************************************************************************************************ */}
-
-
-{/* { this.state.filters.map(filter =>  */}
+   
     {this.state.filters.length ? (
-                  <DrinkList>
+             
+             
+             <DrinkList>
                   {this.state.filters.map(filter => {
                     console.log(filter);
                     return (
@@ -99,19 +92,8 @@ export default class Cocktails extends React.Component {
               ) : (
                 <h4 className="text-center">No Drinks to Display</h4>
               )}
-
-
-{/* ************************************************************************************************************************************************************************ */}
-
-
-
-
-
-
-
-
-
-
+            
+{/* ************************************************************************************************************************************************************************ *
 
 {/* Ending Div  */}
 </div>

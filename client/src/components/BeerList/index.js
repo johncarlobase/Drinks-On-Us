@@ -2,9 +2,16 @@ import React from "react";
 import { Container, Row, Col } from "../Grid";
 import "./style.css";
 import {Button, Accordion, Card }from 'react-bootstrap';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-// Exporting both RecipeList and RecipeListItem from this file
+
+const cardStyle = {
+  marginTop: "5px",
+  boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+  padding: "10px",
+  width: "950px",
+  margin: "auto"
+
+}
 
 // RecipeList renders a bootstrap list item
 export function BeerList({ children }) {
@@ -18,13 +25,13 @@ props,
   
   return (
 
-    <li className="list-group-item list">
+    <li className="list-group-item list" >
       <Container>
         <Row>
           <Col size="sm-12">
 
 <Accordion>
-  <Card>
+  <Card style={cardStyle}>
      <Card.Header>
       <Accordion.Toggle as={Button} variant="link" eventKey="0">
        <h3> {props.name}</h3>

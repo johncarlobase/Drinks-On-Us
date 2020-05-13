@@ -1,17 +1,23 @@
-import React from 'react';
-// import Nav from "../components/Nav";
+import React from "react";
+import Hero from "../components/Hero";
 import Jumbotron from "../components/Jumbotron"
-import LoginPage from "../components/Login"
+import MyModal from "../components/Modal"
+import Footer from "../components/Footer"
+
+
 
 function App() {
   return (
     <div className="App">
-     <Jumbotron />     
-     {/* <Nav /> */}
-     <h1>Welcome to Drinks Are On Us!</h1>
-     <LoginPage/>
-
+   <MyModal />
+    <Jumbotron />
+        <Hero backgroundImage="https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+           <h1>Welcome To Drinks Are On Us!</h1>
+            <h2>"When I read about the evils of drinking I gave up reading."</h2>
+        </Hero> 
+          <Footer/>
     </div>
+
   );
 }
 

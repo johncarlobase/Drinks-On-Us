@@ -3,13 +3,28 @@ import Jumbotron from "../components/Jumbotron"
 import Cocktails from "../components/Cocktails"
 import DrinkSearch from "../components/DrinkSearch"
 import IngredientSearch from "../components/IngredientSearch"
+// import { Container } from '../components/Grid';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-//import { Container, Row, Col } from "../components/Grid";
+
+let bg= require ('../Images/marble2.jpg')
+
+
+const tabbs ={
+  marginTop: "40px",
+  boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+  padding: "10px",
+  backgroundImage: 'url('+bg+')',
+  width: "1300px",
+  margin: "auto",
+  }
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
+ 
      <Jumbotron />     
-    <Tabs>
+ <div className = "wtf">
+ {/* <Container> */}
+    <Tabs style = {tabbs}>
     <TabList>
           <Tab>Drinks By Category</Tab>
           <Tab>Search By Ingredient</Tab>
@@ -27,9 +42,9 @@ function App() {
      <DrinkSearch/>
      </TabPanel>
 
-
-
      </Tabs>
+     {/* </Container> */}
+     </div>
     </div>
   );
 }

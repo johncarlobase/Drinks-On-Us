@@ -11,6 +11,7 @@ import Wine_Score from "./pages/Wine_Score";
 import Wrapper from "./components/Wrapper";
 import Saved from "./pages/Saved";
 
+// import Valid from "./pages/Valid";
 
 function App() {
 
