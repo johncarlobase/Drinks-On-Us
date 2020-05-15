@@ -6,6 +6,7 @@ import {Card, Accordion, Button }from 'react-bootstrap';
 import API from "../../Utils/API"
 import 'bootstrap/dist/css/bootstrap.min.css';
 let bg= require ('../../Images/marble2.jpg')
+
 const list ={
   width: "535px",
   margin: "auto",
@@ -21,9 +22,14 @@ const cardStyle = {
   backgroundImage: 'url('+bg+')'
 }
 
+
+
+
+
 class DrinkListItem extends Component {   
     state = {
-        details: []
+        details: [],
+        
     }
     componentDidLoad() {
            API.getDrinkId(this.props.idDrink)
@@ -61,6 +67,7 @@ class DrinkListItem extends Component {
                  <Card.Body>
                   {this.state.details.map(detail => 
                    <div key = {detail.idDrink}>
+                     <ul>
                    <li>Drink : {detail.strDrink}</li> 
                    <li>Category : {detail.strCategory}</li>
                    <li>Type : {detail.strAlcoholic}</li>
@@ -81,6 +88,7 @@ class DrinkListItem extends Component {
                    <li>Ingredient13 : {detail.strIngredient13}  - {detail.strMeasure13}</li>
                    <li>Ingredient14 : {detail.strIngredient14}  - {detail.strMeasure14}</li>
                    <li>Ingredient15 : {detail.strIngredient15}  - {detail.strMeasure15}</li> */}
+                   </ul>
                   </div>
                 )}
               </Card.Body>

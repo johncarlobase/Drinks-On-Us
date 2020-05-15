@@ -63,7 +63,7 @@
     {
      
         "quoteText" :"An intelligent man is sometimes forced to be drunk to spend time with his fools.",
-		"source" : "Ernest Hemingway",
+		"author" : "Ernest Hemingway",
         "img" : "https://images.gr-assets.com/authors/1574217836p2/1455.jpg"
     },
     {
@@ -273,7 +273,7 @@
     {
        
         "quoteText" : "If I have a near-beer, I’m near beer. And if I’m near beer, I’m close to tequila. And if I’m close to tequila, I’m adjacent to cocaine.",
-		"auhtor":"Craig Ferguson",
+		"author":"Craig Ferguson",
         "img" : "https://images.gr-assets.com/authors/1209559121p2/77426.jpg"
     },
     {

@@ -3,3 +3,29 @@ body{
 
 background-size: inherit;
 }
+ .wrapper2 {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+.wrapper2 {
+  background-image: url(../../Images/smoke-overlay-png-5.png);  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  perspective: 2000px;
+  perspective-origin: 50% 50%;
+  animation: animation 50s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -1000px;
+  }
+}

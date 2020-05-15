@@ -21,7 +21,8 @@ function App() {
   return (
     <div className="App" >
  
-     <Jumbotron />     
+     <Jumbotron />    
+
  <div className = "wtf">
  {/* <Container> */}
     <Tabs style = {tabbs}>

@@ -1,5 +1,6 @@
 .hero {
   height: 1240px;
+  
   background-size: auto;
   background-position: center;
   position: relative;
@@ -28,7 +29,7 @@
 
 .hero h1 {
   font-family: 'Crimson Text', serif;
-  text-shadow: -1px -1px 0 rgb(12, 5, 29), 1px -1px 0 rgb(253, 5, 5), -1px 1px 0 rgb(46, 42, 42), 1px 1px 0 #000;
+  text-shadow: -2px -2px 0 rgb(12, 5, 29), 2px -2px 0 rgb(25, 5, 5), -2px 2px 0 rgb(46, 42, 42), 2px 2px 0 #000;
   font-size: 105px;
   padding-top: 140px;
   margin-top: 0;
