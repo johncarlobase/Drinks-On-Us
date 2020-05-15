@@ -14,6 +14,11 @@ const cardStyle = {
   backgroundImage: 'url('+bg+')'
 }
 
+const list ={
+    width: "535px",
+    margin: "auto",
+    backgroundColor: "#b8b5ba"
+  }
 class Results extends Component {
 
     state = {
@@ -60,6 +65,7 @@ class Results extends Component {
 
     render() {
         return (
+            <div className="list-group-item list" style={list}>
             <Container>
                 <Row>
                     <Col size="sm-12">     
@@ -106,7 +112,7 @@ class Results extends Component {
                     </Col>
                 </Row>
             </Container>
-        
+            </div>
         )
     }
 }

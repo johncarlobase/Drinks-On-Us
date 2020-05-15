@@ -9,7 +9,9 @@ import IBU from "../components/Beer/IBU.PNG"
 import SRM from "../../src/Images/SRM.png"
 import ABV from "../components/Beer/ABV.JPG"
 
-
+const h3 = {
+  fontFamily: "Crimson",
+}
 
 const cardStyle = {
   marginTop: "5px",
@@ -39,7 +41,7 @@ function App() {
                        <Card className = "card" style ={cardStyle}>
                           <Card.Header>
                                <Accordion.Toggle as={Button} variant="link" eventKey="0">    
-                                  <h5>ABV – Alcohol By Volume</h5>
+                                  <h2 style = {h3}>ABV – Alcohol By Volume</h2>
                               </Accordion.Toggle>
                           </Card.Header>
                           <Accordion.Collapse eventKey="0">
@@ -59,7 +61,7 @@ function App() {
                         <Card className = "card" style ={cardStyle}>
                           <Card.Header>
                               <Accordion.Toggle as={Button} variant="link" eventKey="0">  
-                                <h5>IBU – International Bitterness Units</h5>
+                                <h2 style = {h3}>IBU – International Bitterness Units</h2>
                               </Accordion.Toggle>
                           </Card.Header>
                           <Accordion.Collapse eventKey="0">
@@ -80,7 +82,7 @@ function App() {
                       <Card className = "card" style ={cardStyle}>
                         <Card.Header>
                          <Accordion.Toggle as={Button} variant="link" eventKey="0">  
-                           <h5>SRM – Standard Reference Method</h5>
+                           <h2 style = {h3}>SRM – Standard Reference Method</h2>
                          </Accordion.Toggle>
                          </Card.Header>
                          <Accordion.Collapse eventKey="0">
@@ -100,7 +102,7 @@ function App() {
                       <Card className = "card" style ={cardStyle}>
                          <Card.Header>
             <               Accordion.Toggle as={Button} variant="link" eventKey="0">  
-                              <h5>OG/FG- Original Gravity/Final Gravity</h5>
+                              <h2 style = {h3}>OG/FG- Original Gravity/Final Gravity</h2>
                            </Accordion.Toggle>
                            </Card.Header>
                            <Accordion.Collapse eventKey="0">
