@@ -25,7 +25,7 @@ props,
   
   return (
 
-    <li className="list-group-item list" >
+    <li className="list-group-item list wrapper2" >
       <Container>
         <Row>
           <Col size="sm-12">

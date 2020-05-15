@@ -71,7 +71,7 @@ class Results extends Component {
                                         <img src= {this.props.drinks.image} alt="img" className ="pic"/> 
                                     </Accordion.Toggle>
                                 </Card.Header>
-                                <Accordion.Collapse eventKey="0">
+                                         <Accordion.Collapse eventKey="0">
                                     <Card.Body>
                                         <div key = {this.props.drinks.id}>
                                         <li>Drink : {this.props.drinks.drink}</li> 
@@ -79,8 +79,8 @@ class Results extends Component {
                                         <li>Type : {this.props.drinks.alcoholic}</li>
                                         <li>Served In : {this.props.drinks.glass}</li>
                                         <li>Instructions : {this.props.drinks.instructions}</li>
-                                        {/* <li>Ingredient1 : {detail.strIngredient1}  -  {detail.strMeasure1}</li>
-                                        <li>Ingredient2 : {detail.strIngredient2}  -  {detail.strMeasure2}</li>
+                                        {/* <li>Ingredient1 : {this.props.detail.strIngredient1}  -  {this.props.detail.strMeasure1}</li> */}
+                                        {/* <li>Ingredient2 : {detail.strIngredient2}  -  {detail.strMeasure2}</li>
                                         <li>Ingredient3 : {detail.strIngredient3}  -  {detail.strMeasure3}</li>
                                         <li>Ingredient4 : {detail.strIngredient4}  -  {detail.strMeasure4}</li>
                                         <li>Ingredient5 : {detail.strIngredient5}  -  {detail.strMeasure5}</li>
@@ -93,7 +93,7 @@ class Results extends Component {
                                         <li>Ingredient12 : {detail.strIngredient12}  - {detail.strMeasure12}</li>
                                         <li>Ingredient13 : {detail.strIngredient13}  - {detail.strMeasure13}</li>
                                         <li>Ingredient14 : {detail.strIngredient14}  - {detail.strMeasure14}</li>
-                                        <li>Ingredient15 : {detail.strIngredient15}  - {detail.strMeasure15}</li> */}
+                                        <li>Ingredient15 : {detail.strIngredient15}  - {detail.strMeasure15}</li>  */}
                                         <button onClick={() => this.handleSave(this.props.drinks)} className="btn badge-pill btn-outline-warning mt-3 ml-3" >
                                             {this.state.savedDrinks.map(drink => drink.id).includes(this.props.drinks.id) ? "Unsave" : "Save"}
                                         </button>

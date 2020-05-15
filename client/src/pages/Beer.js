@@ -6,14 +6,14 @@ import { Container, Row, Col } from '../components/Grid';
 import {Card, Accordion, Button }from 'react-bootstrap';
 import abv1 from "../components/Beer/abv1.png"
 import IBU from "../components/Beer/IBU.PNG"
-import SRM from "../components/Beer/SRM.png"
+import SRM from "../../src/Images/SRM.png"
 import ABV from "../components/Beer/ABV.JPG"
 
 
 
 const cardStyle = {
   marginTop: "5px",
-  width: "1110px",
+   width: "1110px",
   boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
   padding: "10px",
 

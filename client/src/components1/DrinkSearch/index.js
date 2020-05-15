@@ -22,13 +22,14 @@ export default class DrinkSearch extends React.Component {
   makeDrink = drinkData => {
     return {
       drink: drinkData.strDrink,
-      ingredient: drinkData.ingredients,
+      ingredient: drinkData.ingredient,
       instructions: drinkData.strInstructions,
       glass: drinkData.strGlass,
       image: drinkData.strDrinkThumb,
       id: drinkData.idDrink,
       alcoholic: drinkData.strAlcoholic,
       category: drinkData.strCategory
+  
     }
   };
 

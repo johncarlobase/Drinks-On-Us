@@ -7,7 +7,7 @@
   const h1 ={
     textAlign: "center",
     fontFamily:  'Crimson',
-    fontSize: "55px",
+    fontSize: "57px",
     marginTop: '5px',
     fontWeight: "500"
   }
@@ -15,7 +15,8 @@
   const text = {
     fontSize: "22px",
     fontWeight: "600",
-    color: "#000"
+    color: "#FFFFFF",
+    textShadow: '-2px 2px 0 #000,  2px 2px 2px #000,   2px -2px 0 #000,   -2px -2px 0 #000'
   }
   const cardStyle = {
     marginTop: "5px",
