@@ -29,7 +29,7 @@ export default class DrinkSearch extends React.Component {
       id: drinkData.idDrink,
       alcoholic: drinkData.strAlcoholic,
       category: drinkData.strCategory
-  
+      
     }
   };
 
