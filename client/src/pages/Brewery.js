@@ -7,28 +7,46 @@ import API from "../Utils/API";
 import { BeerList, BeerListItem } from "../components/BeerList";
 import { Container, Row, Col } from "../components/Grid";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import {Card, Accordion}from 'react-bootstrap';
 import 'react-tabs/style/react-tabs.css';
 let bg= require ('../Images/white-marble-3-2018.jpg')
 
 const tabbs ={
-  marginTop: "10px",
+  marginTop: "20px",
   boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
   padding: "10px",
   backgroundImage: 'url('+bg+')',
   width: "1050px"
   }
-  const h1 ={
+ 
+const h1 ={
+  textAlign: "center",
+  fontFamily: "Crimson",
+  fontWeight: "550",
+  fontSize: "55px",
+  
+}
+
+  const h2 ={
     textAlign: "center",
     fontFamily: "Crimson",
     fontWeight: "550",
-    fontSize: "50px",
-    
+    fontSize: "45px"
   }
   const h4 = {
     padding: "5px",
   fontWeight: "550",
     fontFamily: "Crimson",
   }
+
+  
+const cardStyle = {
+  marginTop: "5px",
+  // width: "auto",
+   width: "1050px",
+  boxShadow: "0 3px 6px rgb(82, 80, 80), 0 3px 6px rgb(53, 50, 50)",
+  padding: "10px",
+}
 
 // This is my new gitpush
 class Brewery extends Component {
@@ -90,6 +108,27 @@ handleFormSubmit2 = event => {
       <div>
  <Jumbotron />
 <Container>
+<Row>  
+              <Col size="sm-12">
+                  <Accordion>
+                       <Card className = "card" style ={cardStyle}>
+                          <Card.Header>
+                               <Accordion.Toggle as={Button} variant="link" eventKey="0">    
+                                  <h1 style={h1}>Breweries</h1>
+                              </Accordion.Toggle>
+                          </Card.Header>
+                               <Accordion.Collapse eventKey="0">
+                           <Card.Body>     
+                             <p>A craft brewery or microbrewery is a brewery that produces small amounts of beer, typically much smaller than large-scale corporate breweries, and is independently owned. Such breweries are generally characterized by their emphasis on quality, flavor, and brewing technique.
+
+                            The microbrewing movement began in both the United States and United Kingdom in the 1970s, although traditional artisanal brewing existed in Europe for centuries and subsequently spread to other countries. As the movement grew, and some breweries expanded their production and distribution, the more encompassing concept of craft brewing emerged. A brewpub is a pub that brews its own beer for sale on the premises.</p>
+                             
+                          </Card.Body>
+                          </Accordion.Collapse>
+                        </Card>
+                   </Accordion>
+                </Col>
+            </Row>  
       <Tabs style={tabbs}>
         <TabList>
           <Tab>General Search</Tab>
@@ -105,7 +144,7 @@ handleFormSubmit2 = event => {
                   <form>
                    <Container>
                       <Row>
-                      <h1 style ={h1} >Enter A Brewery To Search For</h1>
+                      <h1 style ={h2} >Enter A Brewery To Search For</h1>
                       <Col size="xs-9 sm-10">
                       <Input
                         name="beerSearch"
@@ -168,7 +207,7 @@ handleFormSubmit2 = event => {
                   <form>
                    <Container>
                       <Row>
-                      <h2 style ={h1} className ="enter">Enter A City To Search For A Brewery List</h2>
+                      <h2 style ={h2} className ="enter">Enter A City To Search For A Brewery List</h2>
                       <Col size="xs-9 sm-10">
                       <Input
                         name="beerCity"
@@ -215,7 +254,7 @@ handleFormSubmit2 = event => {
                       })}
                 </BeerList>
               ) : (
-                <h3 style = {h4} className="text-center no-bee">No City Breweries to Display</h3>
+                <h2 style = {h4} className="text-center no-bee">No City Breweries to Display</h2>
               )}
             </Col>
           </Row>
@@ -231,7 +270,7 @@ handleFormSubmit2 = event => {
                   <form>
                    <Container>
                       <Row>
-                      <h3 style ={h1} className ="enter">Enter A State To Search For A Brewery List</h3>
+                      <h3 style ={h2} className ="enter">Enter A State To Search For A Brewery List</h3>
                       <Col size="xs-9 sm-10">
                       <Input
                         name="beerState"
@@ -278,7 +317,7 @@ handleFormSubmit2 = event => {
                       })}
                     </BeerList>
                     ) : (
-                      <h3 style = {h4} className="text-center no-bee">No State Breweries to Display</h3>
+                      <h2 style = {h4} className="text-center no-bee">No State Breweries to Display</h2>
                     )}
                   </Col>
                 </Row>

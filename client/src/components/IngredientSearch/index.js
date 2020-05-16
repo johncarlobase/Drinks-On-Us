@@ -23,7 +23,22 @@ export default class IngredientSearch extends React.Component {
   makeDrink = drinkData => {
     return {
       drink: drinkData.strDrink,
-      ingredient: drinkData.ingredients,
+      ingredient1: drinkData.strIngredient1,
+      ingredient2: drinkData.strIngredient2,
+      ingredient3: drinkData.strIngredient3,
+      ingredient4: drinkData.strIngredient4,
+      ingredient5: drinkData.strIngredient5,
+      ingredient6: drinkData.strIngredient6,
+      ingredient7: drinkData.strIngredient7,
+      ingredient8: drinkData.strIngredient8,
+      measurement1: drinkData.strMeasure1,
+      measurement2: drinkData.strMeasure2,
+      measurement3: drinkData.strMeasure3,
+      measurement4: drinkData.strMeasure4,
+      measurement5: drinkData.strMeasure5,
+      measurement6: drinkData.strMeasure6,
+      measurement7: drinkData.strMeasure7,
+      measurement8: drinkData.strMeasure8,
       instructions: drinkData.strInstructions,
       glass: drinkData.strGlass,
       image: drinkData.strDrinkThumb,
@@ -31,7 +46,7 @@ export default class IngredientSearch extends React.Component {
       alcoholic: drinkData.strAlcoholic,
       category: drinkData.strCategory
     }
-  };
+  };I
 
   searchDrink = query => {
     API.getDrinksAPI(query)

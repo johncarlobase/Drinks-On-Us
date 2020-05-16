@@ -25,7 +25,7 @@ props,
   
   return (
 
-    <li className="list-group-item list wrapper2" >
+    // <li className="list-group-item list wrapper2" >
       <Container>
         <Row>
           <Col size="sm-12">
@@ -62,6 +62,6 @@ props,
           </Col>
         </Row>
       </Container>
-    </li>
+    // </li>
   );
 }
