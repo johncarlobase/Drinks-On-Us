@@ -6,7 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.13",
     "@popperjs/core": "^2.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "bootstrap-less": "^3.3.8",
     "concurrently": "^5.2.0",
